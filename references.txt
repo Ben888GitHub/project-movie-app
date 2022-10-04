@@ -1,0 +1,8 @@
+Tailwind Icons Component  
+https://heroicons.com/
+
+Tailwind SVG Generator
+https://www.tailwindtoolbox.com/icons
+
+HTML lang attribute to have a better Web Accessibility
+https://daily-dev-tips.com/posts/nextjs-add-lang-attribute-to-html-tag/
