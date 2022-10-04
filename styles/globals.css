@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
 	padding: 0;
@@ -15,6 +19,23 @@ a {
 	box-sizing: border-box;
 }
 
+/* custom Dark Mode Color */
+/* [data-theme='dark'],
+[data-theme='dark'] body {
+	color: #fff;
+	background: #1a202c;
+} */
+
+/* [class='dark'], */
+[class='dark'] body {
+	color: #fff;
+	background: #1a202c;
+}
+
+/* [data-theme='dark'] {
+	--fg: #fff;
+	--bg: #000;
+} */
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
