@@ -4,7 +4,7 @@ const api = 'https://api.themoviedb.org/3';
 
 const envFile = process.env.API_KEY;
 
-const fetchMovies = async () => {
+const fetchFilm = async () => {
 	const options = {
 		method: 'GET',
 		url: `${api}/tv/popular`,
@@ -16,4 +16,4 @@ const fetchMovies = async () => {
 	return data;
 };
 
-export { fetchMovies };
+export { fetchFilm };
