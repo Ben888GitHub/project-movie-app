@@ -6,6 +6,16 @@ module.exports = {
 	],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			display: ['Poppins'],
+			body: ['"Poppins'],
+			bold: ['Poppins'],
+			medium: ['Poppins'],
+			semibold: ['Poppins'],
+			'extra-bold': ['"Poppins"'],
+			black: ['Poppins']
+		},
+
 		extend: {}
 	},
 	plugins: []

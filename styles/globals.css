@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	html {
+		font-family: Poppins, system-ui, sans-serif;
+	}
+}
+/* @font-bold {
+	font-family: 'Poppins';
+	font-weight: bold;
+} */
+
 html,
 body {
 	padding: 0;
