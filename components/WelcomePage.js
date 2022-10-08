@@ -3,7 +3,7 @@ import threed from '../images/three_d.png';
 
 function WelcomePage() {
 	return (
-		<div className="container bg-[url('../images/image_11_compressed.jpeg')]  mx-auto  bg-fixed ">
+		<div className="container bg-[url('../images/image_11_compressed.jpeg')]  mx-auto  bg-fixed mb-10">
 			<div className="backdrop-brightness-50 p-2 md:p-5 lg:p-5  md:pb-10 lg:pb-10 pb-5 text-center">
 				<div className="relative h-[215px] md:h-72 lg:h-72 w-full">
 					<Image

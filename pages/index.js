@@ -13,17 +13,18 @@ export default function Home({ movies, tv }) {
 			</Head>
 
 			<WelcomePage />
+
 			<MoviesOrTv title="movie" filmList={movies} />
-			<br />
+
 			<MoviesOrTv title="tv" filmList={tv} />
 		</>
 	);
 }
 
 export const getStaticProps = async () => {
-	const movies = await fetchFilm('movie');
+	const movies = await fetchFilm('movie', 1);
 
-	const tv = await fetchFilm('tv');
+	const tv = await fetchFilm('tv', 1);
 
 	return {
 		props: { movies, tv },
