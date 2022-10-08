@@ -20,12 +20,13 @@ export default function Home({ movies, tv }) {
 	);
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
 	const movies = await fetchFilm('movie');
 
 	const tv = await fetchFilm('tv');
 
 	return {
-		props: { movies, tv }
+		props: { movies, tv },
+		revalidate: 10
 	};
 };
