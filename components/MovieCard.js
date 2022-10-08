@@ -7,8 +7,8 @@ function MovieCard({ title, name, tv_date, poster, movie_date }) {
 				<Image
 					src={`https://image.tmdb.org/t/p/w500${poster}`}
 					alt={title || name}
-					width={700}
-					height={800}
+					width={500}
+					height={750}
 					priority
 					placeholder="empty"
 				/>

@@ -15,7 +15,7 @@ function MoviesOrTv({ title, filmList }) {
 						{film.original_title || film.original_name}
 					</h2>
 				))} */}
-			{filmList?.results?.slice(15, 19).map((film, idx) => (
+			{filmList?.results?.slice(12, 16).map((film, idx) => (
 				<MovieCard
 					key={idx}
 					title={film.original_title}
