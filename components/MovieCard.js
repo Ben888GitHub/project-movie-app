@@ -13,10 +13,10 @@ function MovieCard({ title, name, tv_date, poster, movie_date }) {
 					placeholder="empty"
 					className="rounded-t-lg"
 				/>
-				<div className="p-5 text-left">
-					<h5 className="mb-2 sm:text-md md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+				<div className="p-5 lg:mt-0 md:mt-0 -mt-2 text-left">
+					<p className="mb-2 sm:text-md md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
 						{title || name}
-					</h5>
+					</p>
 
 					<p className="mb-3 font-display text-gray-700 dark:text-gray-400">
 						{tv_date || movie_date}
