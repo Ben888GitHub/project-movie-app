@@ -11,6 +11,7 @@ function MovieCard({ title, name, tv_date, poster, movie_date }) {
 					height={750}
 					priority
 					placeholder="empty"
+					className="rounded-t-lg"
 				/>
 				<div className="p-5 text-left">
 					<h5 className="mb-2 sm:text-md md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
