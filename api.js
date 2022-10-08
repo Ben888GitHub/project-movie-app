@@ -4,12 +4,15 @@ const api = 'https://api.themoviedb.org/3';
 
 const envFile = process.env.API_KEY;
 
-const fetchFilm = async () => {
+const fetchFilm = async (title) => {
+	const film = title === 'tv' ? 'tv' : 'movie';
+
 	const options = {
 		method: 'GET',
-		url: `${api}/tv/popular`,
+		url: `${api}/${film}/popular`,
 		params: {
-			api_key: envFile
+			api_key: envFile,
+			page: 1
 		}
 	};
 	const data = axios(options).then((res) => res.data);

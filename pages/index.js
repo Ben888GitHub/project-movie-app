@@ -1,9 +1,9 @@
 import Head from 'next/head';
-
 import { fetchFilm } from '../api';
+import MoviesOrTv from '../components/MoviesOrTv';
 import WelcomePage from '../components/WelcomePage';
 
-export default function Home() {
+export default function Home({ movies, tv }) {
 	return (
 		<>
 			<Head>
@@ -13,16 +13,19 @@ export default function Home() {
 			</Head>
 
 			<WelcomePage />
+			<MoviesOrTv title="movie" filmList={movies} />
+			<br />
+			<MoviesOrTv title="tv" filmList={tv} />
 		</>
 	);
 }
 
-export const getStaticProps = async () => {
-	const films = await fetchFilm();
+export const getServerSideProps = async () => {
+	const movies = await fetchFilm('movie');
 
-	// console.log(films.results.length);
+	const tv = await fetchFilm('tv');
 
 	return {
-		props: { films }
+		props: { movies, tv }
 	};
 };
