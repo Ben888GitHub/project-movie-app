@@ -6,7 +6,7 @@ function MovieCard({ title, name, tv_date, poster, movie_date, id }) {
 		<div className="inline-flex m-3 md:m-5 lg:m-5">
 			<div className="max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
 				<Link href={`/movie/${id}`} passHref>
-					<div className="rounded-t-lg cursor-pointer">
+					<div className="rounded-t-lg cursor-pointer relative">
 						<Image
 							src={`https://image.tmdb.org/t/p/w500${poster}`}
 							alt={title || name}
