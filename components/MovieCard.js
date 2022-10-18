@@ -11,7 +11,7 @@ function MovieCard({ title, name, tv_date, poster, movie_date, id }) {
 							src={`https://image.tmdb.org/t/p/w500${poster}`}
 							alt={title || name}
 							width={500}
-							height={750}
+							height={667}
 							priority
 							placeholder="empty"
 							className="rounded-t-lg cursor-pointer"
