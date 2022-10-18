@@ -10,7 +10,7 @@ function MoviesOrTv({ title, filmList }) {
 				{title === 'movie' ? 'Popular Movie' : 'Popular TV'}
 			</h1>
 
-			{filmList?.results?.slice(12, 16).map((film, idx) => (
+			{filmList?.results?.slice(8, 12).map((film, idx) => (
 				<MovieCard
 					key={idx}
 					id={film.id}
