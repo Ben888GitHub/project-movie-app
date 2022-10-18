@@ -12,7 +12,6 @@ const nextConfig = {
 	images: {
 		domains: ['image.tmdb.org']
 	}
-	// productionBrowserSourceMaps: true
 };
 
 module.exports = nextConfig;

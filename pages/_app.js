@@ -1,7 +1,5 @@
 import { ThemeProvider } from 'next-themes';
 import Layout from '../components/Layout';
-// import { disableReactDevTools } from '../disableReactDevTools';
-
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
