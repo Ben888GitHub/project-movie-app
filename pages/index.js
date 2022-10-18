@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { fetchFilm } from '../api';
-
 import MoviesOrTv from '../components/MoviesOrTv';
-
 import WelcomePage from '../components/WelcomePage';
 
 export default function Home({ movies, tv }) {
