@@ -13,6 +13,7 @@ function MoviesOrTv({ title, filmList }) {
 			{filmList?.results?.slice(12, 16).map((film, idx) => (
 				<MovieCard
 					key={idx}
+					id={film.id}
 					title={film.original_title}
 					name={film.original_name}
 					tv_date={film.first_air_date}
