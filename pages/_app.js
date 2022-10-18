@@ -1,9 +1,8 @@
 import { ThemeProvider } from 'next-themes';
 import Layout from '../components/Layout';
-import { disableReactDevTools } from '../disableReactDevTools';
-import '../styles/globals.css';
+// import { disableReactDevTools } from '../disableReactDevTools';
 
-if (process.env.NODE_ENV === 'production') disableReactDevTools();
+import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
 	return (
