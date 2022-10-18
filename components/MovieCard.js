@@ -13,7 +13,8 @@ function MovieCard({ title, name, tv_date, poster, movie_date, id }) {
 							width={500}
 							height={750}
 							priority
-							placeholder="empty"
+							lazy="true"
+							// placeholder="empty"
 							// className="rounded-t-lg cursor-pointer"
 						/>
 					</div>
