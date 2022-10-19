@@ -19,4 +19,16 @@ const fetchFilm = async (title, page) => {
 	return data;
 };
 
-export { fetchFilm };
+const fetchFilmById = async (title, id) => {
+	const options = {
+		method: 'GET',
+		url: `${api}/${title}/${id}`,
+		params: {
+			api_key: envFile
+		}
+	};
+	const data = axios(options).then((res) => res.data);
+	return data;
+};
+
+export { fetchFilm, fetchFilmById };

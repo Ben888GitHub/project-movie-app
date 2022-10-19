@@ -3,7 +3,7 @@ import { fetchFilm } from '../api';
 import MoviesOrTv from '../components/MoviesOrTv';
 import WelcomePage from '../components/WelcomePage';
 
-export default function Home({ movies, tv }) {
+export default function Home({ tv, movie }) {
 	return (
 		<>
 			<Head>
@@ -14,7 +14,7 @@ export default function Home({ movies, tv }) {
 
 			<WelcomePage />
 
-			<MoviesOrTv title="movie" filmList={movies} />
+			<MoviesOrTv title="movie" filmList={movie} />
 
 			<MoviesOrTv title="tv" filmList={tv} />
 		</>
@@ -22,12 +22,12 @@ export default function Home({ movies, tv }) {
 }
 
 export const getStaticProps = async () => {
-	const movies = await fetchFilm('movie', 1);
+	const movie = await fetchFilm('movie', 1);
 
 	const tv = await fetchFilm('tv', 1);
 
 	return {
-		props: { movies, tv },
+		props: { tv, movie },
 		revalidate: 10
 	};
 };
