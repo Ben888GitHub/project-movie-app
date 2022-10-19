@@ -8,7 +8,7 @@ function WelcomePage() {
 				<div className="relative h-[215px] md:h-72 lg:h-72 w-full">
 					<Image
 						src={threed}
-						alt="Picture of the nature"
+						alt="home cinema"
 						layout="fill"
 						objectFit="contain"
 						priority

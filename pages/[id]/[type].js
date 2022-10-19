@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { fetchFilmById } from '../../api';
 import Title from '../../components/movie/Title';
 
-function AboutID({ id, filmType }) {
+function Movie({ id, filmType }) {
 	return (
 		<>
 			<Head>
@@ -15,7 +15,7 @@ function AboutID({ id, filmType }) {
 	);
 }
 
-export default AboutID;
+export default Movie;
 
 export const getStaticProps = async ({ params }) => {
 	const { id, type } = params;
