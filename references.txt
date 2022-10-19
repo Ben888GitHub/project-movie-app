@@ -22,3 +22,6 @@ TMDB API Docs
 https://developers.themoviedb.org/3/getting-started/introduction  - Getting started
 https://www.themoviedb.org/settings/api/request - Create new API Key
 https://www.themoviedb.org/settings/api - Your API Key
+
+Array map axios and avoid Promise Pending 
+https://stackoverflow.com/questions/70037615/an-array-of-promises-is-returned-when-using-axios-in-map-function

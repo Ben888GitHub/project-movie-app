@@ -1,9 +1,6 @@
 import MovieCard from './MovieCard';
 
 function MoviesOrTv({ title, filmList }) {
-	// console.log(films);
-	// todo if films are movies display movie data, else display tv data
-
 	return (
 		<div className="container mx-auto text-center">
 			<h1 className="font-display  text-3xl mt-10 md:mt-7 lg:mt-7">
