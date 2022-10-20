@@ -36,7 +36,8 @@ const fetchFilmById = async (type, id) => {
 		release_date,
 		first_air_date,
 		episode_run_time,
-		runtime
+		runtime,
+		backdrop_path
 	} = data;
 
 	const filmName = type === 'movie' ? title : name;
@@ -45,18 +46,17 @@ const fetchFilmById = async (type, id) => {
 
 	const rating = Number(vote_average).toFixed(1);
 
-	// const tv_duration = episode_run_time?.length === 0 ? 0 : episode_run_time[0];
-
 	const duration =
 		type === 'movie'
 			? runtime
-			: episode_run_time.length !== 0 && episode_run_time[0];
+			: episode_run_time?.length !== 0 && episode_run_time[0];
 
 	return {
 		filmName,
 		rating,
 		filmDate,
-		duration
+		duration,
+		backdrop_path
 	};
 };
 
