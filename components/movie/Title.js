@@ -1,4 +1,4 @@
-function Title({ filmName, tvOrMovie, filmDate, rating }) {
+function Title({ filmName, tvOrMovie, filmDate, rating, duration }) {
 	return (
 		<div className="container mx-auto lg:max-w-6xl md:max-w-6xl mt-3 lg:mt-5 md:mt-5">
 			<div className="flex flex-wrap justify-between px-4 md:px-6">
@@ -7,7 +7,8 @@ function Title({ filmName, tvOrMovie, filmDate, rating }) {
 						{filmName}
 					</p>
 					<p className="text-lg md:text-2xl lg:text-2xl font-display mt-0 md:mt-2 lg:mt-2">
-						{tvOrMovie === 'movie' ? 'Movie' : 'TV Shows'} · {filmDate} · 30m{' '}
+						{tvOrMovie === 'movie' ? 'Movie' : 'TV Shows'} · {filmDate} ·{' '}
+						{duration}m
 					</p>
 				</div>
 
