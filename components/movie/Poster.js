@@ -12,7 +12,7 @@ function Poster({ backdrop_path }) {
 					src={`https://image.tmdb.org/t/p/w500${backdrop_path}`}
 					alt="hello"
 					className="shadow-xl lg:shadow-none md:shadow-none"
-					loading="lazy"
+					priority
 				/>
 			</div>
 		</div>
