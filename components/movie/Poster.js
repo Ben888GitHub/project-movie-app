@@ -7,12 +7,12 @@ function Poster({ backdrop_path }) {
 			 */}
 			<div className="mx-auto text-center">
 				<Image
-					height={481}
-					width={800}
+					height={281}
+					width={500}
 					src={`https://image.tmdb.org/t/p/w500${backdrop_path}`}
 					alt="hello"
 					className="shadow-xl lg:shadow-none md:shadow-none"
-					priority
+					loading="lazy"
 				/>
 			</div>
 		</div>
