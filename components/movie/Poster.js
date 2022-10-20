@@ -13,6 +13,7 @@ function Poster({ backdrop_path }) {
 					alt="hello"
 					className="shadow-xl lg:shadow-none md:shadow-none"
 					priority
+					placeholder="empty"
 				/>
 			</div>
 		</div>
