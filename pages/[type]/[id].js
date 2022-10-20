@@ -2,15 +2,21 @@ import Head from 'next/head';
 import { fetchFilmById } from '../../api';
 import Title from '../../components/movie/Title';
 
-function Movie({ id, filmType }) {
+function Movie({ id, filmName, type, filmDate, rating }) {
 	return (
 		<>
 			<Head>
-				<title>{filmType}</title>
+				<title>{filmName}</title>
 				<meta name="description" content="TV name" />
 			</Head>
 
-			<Title movieId={id} filmType={filmType} />
+			<Title
+				movieId={id}
+				filmName={filmName}
+				tvOrMovie={type}
+				filmDate={filmDate}
+				rating={rating}
+			/>
 		</>
 	);
 }
@@ -20,17 +26,15 @@ export default Movie;
 export const getStaticProps = async ({ params }) => {
 	const { id, type } = params;
 
-	const data = await fetchFilmById(type, id);
-
-	const { title, name, vote_count } = data;
-
-	const filmType = type === 'movie' ? title : name;
+	const { filmName, rating, filmDate } = await fetchFilmById(type, id);
 
 	return {
 		props: {
 			id,
-			filmType,
-			vote_count
+			filmName,
+			rating,
+			filmDate,
+			type
 		},
 		revalidate: 10
 	};
