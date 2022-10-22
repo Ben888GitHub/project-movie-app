@@ -10,8 +10,7 @@ const nextConfig = {
 		API_KEY: process.env.API_KEY
 	},
 	images: {
-		domains: ['image.tmdb.org'],
-		minimumCacheTTL: 10
+		domains: ['image.tmdb.org']
 	}
 };
 
