@@ -11,7 +11,7 @@ const nextConfig = {
 	},
 	images: {
 		domains: ['image.tmdb.org'],
-		minimumCacheTTL: 50
+		minimumCacheTTL: 10
 	}
 };
 
