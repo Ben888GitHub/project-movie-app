@@ -38,18 +38,12 @@ function Movie({
 export default Movie;
 
 export const getStaticProps = async ({ params }) => {
-	const shuffleItems = (await import('../../utils/shuffleItems')).shuffleItems;
-
 	const { id, type } = params;
-
-	const image = 'images';
 
 	const { filmName, rating, filmDate, duration, backdrop_path } =
 		await fetchFilmById(type, id);
 
-	const { backdrops } = await fetchFilmImages(type, id, image);
-
-	const filmImages = shuffleItems(backdrops).slice(0, 10);
+	const { filmImages } = await fetchFilmImages(type, id);
 
 	console.log(filmImages);
 
@@ -62,7 +56,6 @@ export const getStaticProps = async ({ params }) => {
 			type,
 			duration,
 			backdrop_path
-			// backdrops
 		},
 		revalidate: 10
 	};

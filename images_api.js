@@ -1,10 +1,13 @@
 import axios from 'axios';
+// import { shuffleItems } from './utils/shuffleItems';
 
 const api = 'https://api.themoviedb.org/3';
 
 const envFile = process.env.API_KEY;
 
-const fetchFilmImages = async (type, id, image) => {
+const image = 'images';
+
+const fetchFilmImages = async (type, id) => {
 	const options = {
 		method: 'GET',
 		url: `${api}/${type}/${id}/${image}`,
@@ -16,7 +19,12 @@ const fetchFilmImages = async (type, id, image) => {
 	const { backdrops } = await axios(options).then((res) => res.data);
 
 	console.log(backdrops.length);
-	return { backdrops };
+
+	const shuffleItems = (await import('./utils/shuffleItems')).shuffleItems;
+
+	const filmImages = shuffleItems(backdrops).slice(0, 10);
+
+	return { filmImages };
 };
 
 export { fetchFilmImages };
