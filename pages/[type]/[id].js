@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { fetchFilmById } from '../../api';
 import Poster from '../../components/movie/Poster';
 import Title from '../../components/movie/Title';
+import { fetchFilmImages } from '../../images_api';
+// import { shuffleItems } from '../../utils/shuffleItems';
 
 function Movie({
 	id,
@@ -36,12 +38,20 @@ function Movie({
 export default Movie;
 
 export const getStaticProps = async ({ params }) => {
+	const shuffleItems = (await import('../../utils/shuffleItems')).shuffleItems;
+
 	const { id, type } = params;
 
 	const image = 'images';
 
 	const { filmName, rating, filmDate, duration, backdrop_path } =
 		await fetchFilmById(type, id);
+
+	const { backdrops } = await fetchFilmImages(type, id, image);
+
+	const filmImages = shuffleItems(backdrops).slice(0, 10);
+
+	console.log(filmImages);
 
 	return {
 		props: {
