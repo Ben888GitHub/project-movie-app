@@ -7,12 +7,12 @@ function Poster({ backdrop_path, filmName }) {
 			 */}
 			<div className="mx-auto text-center">
 				<Image
+					priority
 					height={281}
 					width={500}
 					src={`https://image.tmdb.org/t/p/w500${backdrop_path}`}
 					alt={filmName}
 					className="shadow-xl lg:shadow-none md:shadow-none"
-					priority
 				/>
 			</div>
 		</div>
