@@ -43,6 +43,8 @@ export const getStaticProps = async ({ params }) => {
 	const { filmName, rating, filmDate, duration, backdrop_path } =
 		await fetchFilmById(type, id);
 
+	console.log(backdrop_path);
+
 	return {
 		props: {
 			id,
