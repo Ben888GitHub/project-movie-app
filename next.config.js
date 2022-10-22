@@ -11,7 +11,8 @@ const nextConfig = {
 	},
 	images: {
 		domains: ['image.tmdb.org'],
-		minimumCacheTTL: 31536000
+		minimumCacheTTL: 31536000,
+		formats: ['image/webp']
 	}
 };
 
