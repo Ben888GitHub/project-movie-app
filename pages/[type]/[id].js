@@ -27,7 +27,7 @@ function Movie({
 					rating={rating}
 					duration={duration}
 				/>
-				<Poster backdrop_path={backdrop_path} />
+				<Poster backdrop_path={backdrop_path} filmName={filmName} />
 			</div>
 		</>
 	);
@@ -42,8 +42,6 @@ export const getStaticProps = async ({ params }) => {
 
 	const { filmName, rating, filmDate, duration, backdrop_path } =
 		await fetchFilmById(type, id);
-
-	console.log(backdrop_path);
 
 	return {
 		props: {

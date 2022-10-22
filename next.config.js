@@ -7,13 +7,11 @@ const nextConfig = {
 		defaultLocale: 'en'
 	},
 	env: {
-		API_KEY: process.env.API_KEY,
-		nextImageExportOptimizer_quality: 75,
-		nextImageExportOptimizer_storePicturesInWEBP: true
+		API_KEY: process.env.API_KEY
 	},
 	images: {
 		domains: ['image.tmdb.org'],
-		minimumCacheTTL: 31536000
+		minimumCacheTTL: 50
 	}
 };
 
