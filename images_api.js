@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import { shuffleItems } from './utils/shuffleItems';
+import { shuffleItems } from './utils/shuffleItems';
 
 const api = 'https://api.themoviedb.org/3';
 
@@ -19,8 +19,6 @@ const fetchFilmImages = async (type, id) => {
 	const { backdrops } = await axios(options).then((res) => res.data);
 
 	console.log(backdrops.length);
-
-	const shuffleItems = (await import('./utils/shuffleItems')).shuffleItems;
 
 	const filmImages = shuffleItems(backdrops).slice(0, 10);
 

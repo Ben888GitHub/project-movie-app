@@ -1,9 +1,8 @@
 import Head from 'next/head';
 import { fetchFilmById } from '../../api';
+import { fetchFilmImages } from '../../images_api';
 import Poster from '../../components/movie/Poster';
 import Title from '../../components/movie/Title';
-import { fetchFilmImages } from '../../images_api';
-// import { shuffleItems } from '../../utils/shuffleItems';
 
 function Movie({
 	id,
