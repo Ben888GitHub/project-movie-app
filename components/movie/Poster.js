@@ -15,7 +15,7 @@ function Poster({ backdrop_path }) {
 					className="shadow-xl lg:shadow-none md:shadow-none"
 					priority
 					placeholder="empty"
-					useWebp={process.env.nextImageExportOptimizer_storePicturesInWEBP}
+					useWebp={true}
 				/>
 			</div>
 		</div>
