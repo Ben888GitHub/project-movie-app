@@ -1,14 +1,8 @@
 import Head from 'next/head';
 import { fetchFilmById } from '../../api';
 import { fetchFilmImages } from '../../images_api';
-// import Poster from '../../components/movie/Poster';
+import Poster from '../../components/movie/Poster';
 import Title from '../../components/movie/Title';
-import dynamic from 'next/dynamic';
-import { Suspense } from 'react';
-
-const Poster = dynamic(() => import('../../components/movie/Poster'), {
-	suspense: true
-});
 
 function Movie({
 	id,
@@ -35,13 +29,12 @@ function Movie({
 					rating={rating}
 					duration={duration}
 				/>
-				<Suspense fallback={'Loading...'}>
-					<Poster
-						backdrop_path={backdrop_path}
-						filmName={filmName}
-						filmImages={filmImages}
-					/>
-				</Suspense>
+
+				<Poster
+					backdrop_path={backdrop_path}
+					filmName={filmName}
+					filmImages={filmImages}
+				/>
 			</div>
 		</>
 	);
