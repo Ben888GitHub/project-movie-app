@@ -7,6 +7,7 @@ function Poster({ backdrop_path, filmName }) {
 			 */}
 			<div className="mx-auto text-center">
 				<Image
+					quality={50}
 					priority
 					height={281}
 					width={500}
