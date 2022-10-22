@@ -9,7 +9,7 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 			 */}
 
 			<div className="mx-auto text-center">
-				{filmImages.slice(0, 2).map((gallery, idx) => (
+				{filmImages.map((gallery, idx) => (
 					<Image
 						key={idx}
 						priority
