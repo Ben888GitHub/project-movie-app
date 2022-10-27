@@ -20,7 +20,8 @@ function MovieCard({
 							alt={title || name}
 							width={500}
 							height={750}
-							priority
+							// priority
+							loading="lazy"
 							placeholder="empty"
 							className="rounded-t-lg cursor-pointer relative"
 						/>

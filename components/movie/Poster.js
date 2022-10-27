@@ -13,6 +13,7 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 					<Image
 						key={idx}
 						// priority
+						// todo, remove the quality={50} if there's any issue
 						quality={50}
 						loading="lazy"
 						height={281}
