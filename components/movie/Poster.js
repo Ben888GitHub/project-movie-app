@@ -12,7 +12,8 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 				{filmImages.map((gallery, idx) => (
 					<Image
 						key={idx}
-						priority
+						// priority
+						loading="lazy"
 						height={281}
 						width={500}
 						src={`https://image.tmdb.org/t/p/w500${gallery.file_path}`}
