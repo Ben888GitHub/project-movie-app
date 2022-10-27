@@ -13,6 +13,7 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 					<Image
 						key={idx}
 						// priority
+						quality={50}
 						loading="lazy"
 						height={281}
 						width={500}
