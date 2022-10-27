@@ -21,6 +21,7 @@ function MovieCard({
 							width={500}
 							height={750}
 							// priority
+							quality={50}
 							loading="lazy"
 							placeholder="empty"
 							className="rounded-t-lg cursor-pointer relative"
