@@ -45,8 +45,8 @@ function Cast({ cast }) {
 								<Image
 									src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}
 									alt={actor.original_name}
-									width={200}
-									height={200}
+									width={256}
+									height={384}
 									quality={50}
 									priority
 									placeholder="empty"
