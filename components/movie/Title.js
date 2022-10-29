@@ -18,7 +18,7 @@ function Title({
 				</p>
 			</div>
 
-			<div className="lg:mt-0 md:mt-0 mt-2">
+			<div className="lg:mt-0 md:mt-0 ">
 				<p className="text-lg md:text-2xl lg:text-2xl  font-display">
 					TMDB Rating:
 				</p>
