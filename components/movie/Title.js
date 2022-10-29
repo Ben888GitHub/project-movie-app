@@ -5,15 +5,15 @@ function Title({ filmName, tvOrMovie, filmDate, rating, duration }) {
 				<p className="text-xl md:text-3xl lg:text-3xl  font-medium">
 					{filmName}
 				</p>
-				<p className="text-lg md:text-2xl lg:text-2xl font-display mt-0 md:mt-2 lg:mt-2">
+				<p className="text-md md:text-2xl lg:text-2xl font-display mt-0 md:mt-2 lg:mt-2">
 					{tvOrMovie === 'movie' ? 'Movie' : 'TV Shows'} · {filmDate} ·{' '}
 					{duration}m
 				</p>
 			</div>
 
-			<div>
+			<div className="lg:mt-0 md:mt-0 mt-2">
 				<p className="text-lg md:text-2xl lg:text-2xl  font-display">
-					TMDB Rating{' '}
+					TMDB Rating:
 				</p>
 
 				<div className="flex">
@@ -21,7 +21,7 @@ function Title({ filmName, tvOrMovie, filmDate, rating, duration }) {
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
 						fill="currentColor"
-						className="dark:drop-shadow-none drop-shadow-sm w-7 h-7 md:w-8 md:h-8 lg:w-8 lg:h-8 mt-0 md:mt-2 lg:mt-2 mr-1 fill-[#F6C934] "
+						className="dark:drop-shadow-none drop-shadow-sm w-5 h-5 md:w-8 md:h-8 lg:w-8 lg:h-8 mt-0 md:mt-2 lg:mt-2 mr-0.5 fill-[#F6C934] "
 					>
 						<path
 							fillRule="evenodd"
@@ -29,7 +29,7 @@ function Title({ filmName, tvOrMovie, filmDate, rating, duration }) {
 							clipRule="evenodd"
 						/>
 					</svg>
-					<p className="text-2xl md:text-3xl lg:text-3xl font-display mt-0 md:mt-2 lg:mt-2">
+					<p className="text-md md:text-3xl lg:text-3xl font-display mt-0 md:mt-2 lg:mt-2">
 						{rating}/10{' '}
 					</p>
 				</div>

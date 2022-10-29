@@ -14,8 +14,8 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 		<div className="mt-5">
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y]}
-				// slidesPerView={1}
 				spaceBetween={20}
+				lazy={true}
 				pagination={{
 					clickable: true
 				}}
