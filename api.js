@@ -37,8 +37,13 @@ const fetchFilmById = async (type, id) => {
 		first_air_date,
 		episode_run_time,
 		runtime,
-		backdrop_path
+		backdrop_path,
+		genres,
+		overview
 	} = data;
+
+	console.log(genres);
+	console.log(overview);
 
 	const filmName = type === 'movie' ? title : name;
 
@@ -51,12 +56,16 @@ const fetchFilmById = async (type, id) => {
 			? runtime
 			: episode_run_time?.length !== 0 && episode_run_time[0];
 
+	const isOverview = overview ? overview : 'To be updated...';
+
 	return {
 		filmName,
 		rating,
 		filmDate,
 		duration,
-		backdrop_path
+		backdrop_path,
+		isOverview,
+		genres
 	};
 };
 

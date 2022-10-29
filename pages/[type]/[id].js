@@ -3,6 +3,8 @@ import { fetchFilmById } from '../../api';
 import { fetchFilmImages } from '../../images_api';
 import Poster from '../../components/movie/Poster';
 import Title from '../../components/movie/Title';
+import Overview from '../../components/movie/Overview';
+import Genres from '../../components/movie/Genres';
 
 function Movie({
 	id,
@@ -12,7 +14,9 @@ function Movie({
 	rating,
 	duration,
 	backdrop_path,
-	filmImages
+	filmImages,
+	isOverview,
+	genres
 }) {
 	return (
 		<>
@@ -30,11 +34,9 @@ function Movie({
 					duration={duration}
 				/>
 
-				<Poster
-					backdrop_path={backdrop_path}
-					filmName={filmName}
-					filmImages={filmImages}
-				/>
+				<Poster filmImages={filmImages} />
+				<Overview isOverview={isOverview} />
+				<Genres genres={genres} />
 			</div>
 		</>
 	);
@@ -45,10 +47,19 @@ export default Movie;
 export const getStaticProps = async ({ params }) => {
 	const { id, type } = params;
 
-	const { filmName, rating, filmDate, duration, backdrop_path } =
-		await fetchFilmById(type, id);
+	const {
+		filmName,
+		rating,
+		filmDate,
+		duration,
+		backdrop_path,
+		isOverview,
+		genres
+	} = await fetchFilmById(type, id);
 
 	const { filmImages } = await fetchFilmImages(type, id);
+
+	// console.log(genresBadges);
 
 	return {
 		props: {
@@ -59,6 +70,8 @@ export const getStaticProps = async ({ params }) => {
 			type,
 			duration,
 			backdrop_path,
+			isOverview,
+			genres,
 			filmImages
 		},
 		revalidate: 10
