@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,8 +13,12 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 	return (
 		<div className="mt-5">
 			<Swiper
-				modules={[Navigation, Pagination, Scrollbar, A11y]}
+				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 				spaceBetween={20}
+				autoplay={{
+					delay: 5000,
+					disableOnInteraction: false
+				}}
 				lazy={true}
 				pagination={{
 					clickable: true
@@ -54,7 +58,7 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 									// priority
 									// todo, remove the quality={50} if there's any issue
 									// quality={50}
-									loading="lazy"
+									// loading="lazy"
 									height={281}
 									width={500}
 									src={`https://image.tmdb.org/t/p/w500${gallery.file_path}`}
