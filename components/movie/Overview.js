@@ -1,8 +1,8 @@
 function Overview({ isOverview }) {
 	return (
-		<>
-			<p className="text-lg">{isOverview}</p>
-		</>
+		<div className="m-5">
+			<p className="text-lg font-display">{isOverview}</p>
+		</div>
 	);
 }
 

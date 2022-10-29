@@ -35,6 +35,7 @@ function Movie({
 				/>
 
 				<Poster filmImages={filmImages} />
+
 				<Overview isOverview={isOverview} />
 				<Genres genres={genres} />
 			</div>

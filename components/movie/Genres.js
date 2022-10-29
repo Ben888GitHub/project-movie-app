@@ -2,7 +2,7 @@ import { badgeStyleColors } from '../../utils/badgeColors';
 
 function Genres({ genres }) {
 	return (
-		<div className="flex">
+		<div className="flex -mt-1 ml-5">
 			{genres.map((genre, idx) => (
 				<div key={idx}>
 					<span
