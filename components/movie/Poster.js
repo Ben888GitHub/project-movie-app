@@ -48,12 +48,12 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 			>
 				{filmImages.map((gallery, idx) => (
 					<SwiperSlide key={idx}>
-						<div className="w-[500px] mx-auto ">
-							<div className="mb-10 h-[281px] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+						<div className="w-400px md:w-[500px] lg:w-[500px] mx-auto ">
+							<div className="mb-20 md:mb-10 lg:mb-10 h-[181px] md:[h-281px] lg:h-[281px] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 								<Image
 									// priority
 									// todo, remove the quality={50} if there's any issue
-									quality={50}
+									// quality={50}
 									loading="lazy"
 									height={281}
 									width={500}
