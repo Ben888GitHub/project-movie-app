@@ -10,14 +10,15 @@ function Genres({ genres }) {
 	return (
 		<div className="flex">
 			{genres.map((genre, idx) => (
-				<span
-					key={idx}
-					className={`${
-						colors[genre.name]
-					} text-white text-sm font-medium mr-2 px-2.5 py-0.5 rounded`}
-				>
-					{genre.name}
-				</span>
+				<div key={idx}>
+					<span
+						className={`text-white  ${
+							colors[genre.name]
+						} text-sm font-medium mr-2 px-2.5 py-0.5 rounded focus:outline-none focus:ring-4`}
+					>
+						{genre.name}
+					</span>
+				</div>
 			))}
 		</div>
 	);
