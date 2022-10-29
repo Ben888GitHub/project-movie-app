@@ -1,11 +1,13 @@
 import Head from 'next/head';
 import { fetchFilmById } from '../../api';
 import { fetchFilmImages } from '../../images_api';
+import { fetchFilmCast } from '../../cast_api';
 import Poster from '../../components/movie/Poster';
 import Title from '../../components/movie/Title';
 import Overview from '../../components/movie/Overview';
 import Genres from '../../components/movie/Genres';
 import AddToWatchlist from '../../components/AddToWatchlist';
+import Cast from '../../components/movie/Cast';
 
 function Movie({
 	id,
@@ -14,7 +16,7 @@ function Movie({
 	filmDate,
 	rating,
 	duration,
-	backdrop_path,
+	cast,
 	filmImages,
 	isOverview,
 	genres
@@ -47,6 +49,7 @@ function Movie({
 						<AddToWatchlist />
 					</div>
 				</div>
+				<Cast cast={cast} />
 			</div>
 		</>
 	);
@@ -69,7 +72,7 @@ export const getStaticProps = async ({ params }) => {
 
 	const { filmImages } = await fetchFilmImages(type, id);
 
-	// console.log(genresBadges);
+	const { cast } = await fetchFilmCast(type, id);
 
 	return {
 		props: {
@@ -82,7 +85,8 @@ export const getStaticProps = async ({ params }) => {
 			backdrop_path,
 			isOverview,
 			genres,
-			filmImages
+			filmImages,
+			cast: cast.slice(0, 15)
 		},
 		revalidate: 10
 	};
