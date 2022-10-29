@@ -44,11 +44,12 @@ function Poster({ filmImages }) {
 				}}
 				navigation
 				scrollbar={{ draggable: true }}
+				lazy={true}
 			>
 				{filmImages.map((gallery, idx) => (
 					<SwiperSlide key={idx}>
 						<div className="mb-20 md:mb-12 lg:mb-12 w-400px md:w-[500px] lg:w-[500px] h-[181px] md:[h-281px] lg:h-[281px] mx-auto ">
-							<div className="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+							<div className=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 								<Image
 									quality={50}
 									// loading="lazy"
