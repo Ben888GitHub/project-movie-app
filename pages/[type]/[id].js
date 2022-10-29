@@ -5,6 +5,7 @@ import Poster from '../../components/movie/Poster';
 import Title from '../../components/movie/Title';
 import Overview from '../../components/movie/Overview';
 import Genres from '../../components/movie/Genres';
+import AddToWatchlist from '../../components/AddToWatchlist';
 
 function Movie({
 	id,
@@ -37,7 +38,15 @@ function Movie({
 				<Poster filmImages={filmImages} />
 
 				<Overview isOverview={isOverview} />
-				<Genres genres={genres} />
+
+				<div className="flex-none md:flex lg:flex">
+					<div>
+						<Genres genres={genres} />
+					</div>
+					<div className="ml-5 mt-4 lg:ml-auto md:ml-auto lg:-mt-2 md:-mt-2  ">
+						<AddToWatchlist />
+					</div>
+				</div>
 			</div>
 		</>
 	);
