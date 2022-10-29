@@ -7,9 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-function Poster({ backdrop_path, filmName, filmImages }) {
-	// console.log(filmImages.slice(0, 2));
-
+function Poster({ filmImages }) {
 	return (
 		<div className="mt-5">
 			<Swiper
@@ -19,7 +17,6 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 					delay: 5000,
 					disableOnInteraction: false
 				}}
-				lazy={true}
 				pagination={{
 					clickable: true
 				}}
@@ -47,18 +44,14 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 				}}
 				navigation
 				scrollbar={{ draggable: true }}
-				onSlideChange={() => console.log('slide change')}
-				onSwiper={(swiper) => console.log(swiper)}
 			>
 				{filmImages.map((gallery, idx) => (
 					<SwiperSlide key={idx}>
-						<div className="w-400px md:w-[500px] lg:w-[500px] mx-auto ">
-							<div className="mb-20 md:mb-10 lg:mb-10 h-[181px] md:[h-281px] lg:h-[281px] bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+						<div className="mb-20 md:mb-12 lg:mb-12 w-400px md:w-[500px] lg:w-[500px] h-[181px] md:[h-281px] lg:h-[281px] mx-auto ">
+							<div className="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 								<Image
-									// priority
-									// todo, remove the quality={50} if there's any issue
-									// quality={50}
-									// loading="lazy"
+									quality={50}
+									loading="lazy"
 									height={281}
 									width={500}
 									src={`https://image.tmdb.org/t/p/w500${gallery.file_path}`}
@@ -70,23 +63,6 @@ function Poster({ backdrop_path, filmName, filmImages }) {
 					</SwiperSlide>
 				))}
 			</Swiper>
-
-			{/* <div className="mx-auto text-center">
-				{filmImages.map((gallery, idx) => (
-					<Image
-						key={idx}
-						// priority
-						// todo, remove the quality={50} if there's any issue
-						quality={50}
-						loading="lazy"
-						height={281}
-						width={500}
-						src={`https://image.tmdb.org/t/p/w500${gallery.file_path}`}
-						alt={gallery.file_path}
-						className="shadow-xl lg:shadow-none md:shadow-none"
-					/>
-				))}
-			</div> */}
 		</div>
 	);
 }
