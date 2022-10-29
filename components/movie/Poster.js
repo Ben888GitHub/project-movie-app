@@ -51,7 +51,8 @@ function Poster({ filmImages }) {
 							<div className="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 								<Image
 									quality={50}
-									loading="lazy"
+									// loading="lazy"
+									priority
 									height={281}
 									width={500}
 									src={`https://image.tmdb.org/t/p/w500${gallery.file_path}`}
