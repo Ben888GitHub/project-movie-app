@@ -18,7 +18,10 @@ function MoviesOrTv({ title, filmList }) {
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 				spaceBetween={0}
-				// enable autoplay can cause slower for Lighthouse to run audit
+				//todo
+				// enable autoplay on Image with Next Links
+				// can cause slower for Lighthouse to run audit
+				// as it prefetch new data every 5 or given seconds
 				autoplay={{
 					delay: 5000,
 					disableOnInteraction: false
