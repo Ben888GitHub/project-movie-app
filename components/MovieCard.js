@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { memo } from 'react';
+// import { memo } from 'react';
 import AddToWatchlist from './AddToWatchlist';
 
 function MovieCard({
@@ -48,4 +48,4 @@ function MovieCard({
 	);
 }
 
-export default memo(MovieCard);
+export default MovieCard;
