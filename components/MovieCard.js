@@ -29,7 +29,7 @@ function MovieCard({
 
 							// loading="lazy"
 							// placeholder="empty"
-							// className="rounded-t-lg cursor-pointer relative"
+							className="rounded-t-lg cursor-pointer relative"
 						/>
 					</div>
 				</Link>

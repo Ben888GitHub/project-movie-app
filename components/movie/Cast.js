@@ -12,6 +12,10 @@ function Cast({ cast }) {
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y]}
 				spaceBetween={30}
+				autoplay={{
+					delay: 5000,
+					disableOnInteraction: false
+				}}
 				breakpoints={{
 					300: {
 						slidesPerView: 2,
