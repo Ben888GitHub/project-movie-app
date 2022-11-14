@@ -25,7 +25,7 @@ function MovieCard({
 								// todo, remove the quality and priority if there's any issue
 								// priority
 								quality={50}
-								loading="lazy"
+								// loading="lazy"
 								placeholder="empty"
 								className="rounded-t-lg cursor-pointer relative"
 							/>
