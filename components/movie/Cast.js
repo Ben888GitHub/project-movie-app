@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 function Cast({ cast }) {
 	console.log(cast);
@@ -10,12 +10,8 @@ function Cast({ cast }) {
 			<p className="text-2xl font-medium px-4 mt-7 mb-1">Main Cast</p>
 
 			<Swiper
-				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+				modules={[Navigation, Pagination, Scrollbar, A11y]}
 				spaceBetween={30}
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: false
-				}}
 				breakpoints={{
 					300: {
 						slidesPerView: 2,
