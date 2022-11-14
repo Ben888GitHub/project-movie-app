@@ -20,7 +20,9 @@ export default function Home({ tv, movie }) {
 			<WelcomePage />
 			<Suspense
 				fallback={
-					<p className="text-center text-lg font-display">Loading movie...</p>
+					<p className="text-center text-lg font-display text-black dark:text-white">
+						Loading movie...
+					</p>
 				}
 			>
 				<MoviesOrTv title="movie" filmList={movie} />
@@ -28,7 +30,9 @@ export default function Home({ tv, movie }) {
 
 			<Suspense
 				fallback={
-					<p className="text-center text-lg font-display">Loading tv...</p>
+					<p className="text-center text-lg font-display text-black dark:text-white">
+						Loading tv...
+					</p>
 				}
 			>
 				<MoviesOrTv title="tv" filmList={tv} />
