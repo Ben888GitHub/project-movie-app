@@ -17,10 +17,10 @@ function MoviesOrTv({ title, filmList }) {
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 				spaceBetween={0}
-				// autoplay={{
-				// 	delay: 5000,
-				// 	disableOnInteraction: false
-				// }}
+				autoplay={{
+					delay: 5000,
+					disableOnInteraction: false
+				}}
 				pagination={{
 					clickable: true
 				}}
