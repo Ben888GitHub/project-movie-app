@@ -1,4 +1,4 @@
-// import MovieCard from './MovieCard';
+import MovieCard from './MovieCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -7,9 +7,6 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import dynamic from 'next/dynamic';
-
-const MovieCard = dynamic(() => import('./MovieCard'));
 
 function MoviesOrTv({ title, filmList }) {
 	return (
