@@ -1,11 +1,11 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 const api = 'https://api.themoviedb.org/3';
 
 const envFile = process.env.API_KEY;
 
 const fetchFilmCast = async (type, id) => {
-	const axios = (await import('axios')).default;
+	// const axios = (await import('axios')).default;
 	const options = {
 		method: 'GET',
 		url: `${api}/${type}/${id}/credits`,
