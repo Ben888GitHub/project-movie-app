@@ -38,6 +38,7 @@ function Movie({
 				/>
 
 				<Poster filmImages={filmImages} />
+				<Poster filmImages={filmImages} />
 
 				<Overview isOverview={isOverview} />
 
