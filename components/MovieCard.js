@@ -14,7 +14,7 @@ function MovieCard({
 	return (
 		<div className="inline-flex m-3 md:m-5 lg:m-5">
 			<div className="max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
-				<Link href={`/${tvOrMovie}/${id}`} prefetch={false} passHref>
+				<Link href={`/${tvOrMovie}/${id}`} prefetch={false} replace>
 					<div>
 						<Image
 							src={`https://image.tmdb.org/t/p/w500${poster}`}
