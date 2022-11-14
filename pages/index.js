@@ -2,11 +2,11 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { Suspense } from 'react';
 import { fetchFilm } from '../api';
-// import MoviesOrTv from '../components/MoviesOrTv';
+import MoviesOrTv from '../components/MoviesOrTv';
 import WelcomePage from '../components/WelcomePage';
-const MoviesOrTv = dynamic(() => import('../components/MoviesOrTv'), {
-	suspense: true
-});
+// const MoviesOrTv = dynamic(() => import('../components/MoviesOrTv'), {
+// 	suspense: true
+// });
 
 export default function Home({ tv, movie }) {
 	return (
@@ -18,25 +18,25 @@ export default function Home({ tv, movie }) {
 			</Head>
 
 			<WelcomePage />
-			<Suspense
+			{/* <Suspense
 				fallback={
 					<p className="text-center text-lg font-display text-black dark:text-white">
 						Loading movie...
 					</p>
 				}
-			>
-				<MoviesOrTv title="movie" filmList={movie} />
-			</Suspense>
+			> */}
+			<MoviesOrTv title="movie" filmList={movie} />
+			{/* </Suspense> */}
 
-			<Suspense
+			{/* <Suspense
 				fallback={
 					<p className="text-center text-lg font-display text-black dark:text-white">
 						Loading tv...
 					</p>
 				}
-			>
-				<MoviesOrTv title="tv" filmList={tv} />
-			</Suspense>
+			> */}
+			<MoviesOrTv title="tv" filmList={tv} />
+			{/* </Suspense> */}
 		</>
 	);
 }
