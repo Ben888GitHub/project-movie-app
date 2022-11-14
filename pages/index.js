@@ -22,11 +22,9 @@ export default function Home({ tv, movie }) {
 }
 
 export const getStaticProps = async () => {
-	const movieData = fetchFilm('movie', 1);
+	const movie = await fetchFilm('movie', 1);
 
-	const tvData = fetchFilm('tv', 1);
-
-	const [movie, tv] = await Promise.all([movieData, tvData]);
+	const tv = await fetchFilm('tv', 1);
 
 	return {
 		props: { tv, movie },
