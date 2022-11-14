@@ -17,7 +17,7 @@ function MovieCard({
 		<div className="m-3 md:m-5 lg:m-5">
 			<div className="mx-auto mb-10  max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
 				<Link href={`/${tvOrMovie}/${id}`} passHref>
-					<div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+					<div className="rounded-t-lg cursor-pointer bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
 						<Image
 							quality={50}
 							priority
@@ -29,7 +29,7 @@ function MovieCard({
 
 							// loading="lazy"
 							// placeholder="empty"
-							className="rounded-t-lg cursor-pointer relative"
+							// className="rounded-t-lg cursor-pointer relative"
 						/>
 					</div>
 				</Link>
