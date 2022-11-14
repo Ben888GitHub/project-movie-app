@@ -16,7 +16,7 @@ function MoviesOrTv({ title, filmList }) {
 			</h1>
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-				spaceBetween={20}
+				spaceBetween={0}
 				autoplay={{
 					delay: 5000,
 					disableOnInteraction: false
