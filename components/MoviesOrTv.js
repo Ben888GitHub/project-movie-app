@@ -48,7 +48,7 @@ function MoviesOrTv({ title, filmList }) {
 				}}
 				navigation
 				scrollbar={{ draggable: true }}
-				// lazy={true}
+				lazy={true}
 			>
 				{filmList?.map((film, idx) => (
 					<SwiperSlide key={idx}>

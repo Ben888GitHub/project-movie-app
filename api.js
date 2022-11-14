@@ -1,7 +1,6 @@
 import { shuffleItems } from './utils/shuffleItems';
 
 // import axios from 'axios';
-shuffleItems;
 
 const api = 'https://api.themoviedb.org/3';
 
@@ -21,7 +20,7 @@ const fetchFilm = async (title, page) => {
 	};
 	const data = await axios(options).then((res) => res.data);
 
-	const randomFilm = shuffleItems(data.results).slice(0, 12);
+	const randomFilm = await shuffleItems(data.results).slice(0, 12);
 
 	return randomFilm;
 };
