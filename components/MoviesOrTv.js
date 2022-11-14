@@ -17,10 +17,11 @@ function MoviesOrTv({ title, filmList }) {
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 				spaceBetween={0}
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: false
-				}}
+				// todo, enable autoplay can cause slower for Lighthouse to run audit
+				// autoplay={{
+				// 	delay: 5000,
+				// 	disableOnInteraction: false
+				// }}
 				pagination={{
 					clickable: true
 				}}
