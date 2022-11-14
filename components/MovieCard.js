@@ -13,19 +13,20 @@ function MovieCard({
 	id
 }) {
 	return (
-		<div className="inline-flex m-3 md:m-5 lg:m-5">
-			<div className="max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
+		// use inline-flex in div, if no Carousel
+		<div className="m-3 md:m-5 lg:m-5">
+			<div className="mx-auto mb-10  max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
 				<Link href={`/${tvOrMovie}/${id}`} passHref>
 					<div>
 						<Image
 							src={`https://image.tmdb.org/t/p/w500${poster}`}
-							alt={title || name}
+							alt={poster}
 							width={500}
 							height={750}
 							// todo, remove the quality and priority if there's any issue
-							// priority
+							priority
 							quality={50}
-							loading="lazy"
+							// loading="lazy"
 							placeholder="empty"
 							className="rounded-t-lg cursor-pointer relative"
 						/>
