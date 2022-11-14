@@ -11,6 +11,7 @@ function MovieCard({
 	movie_date,
 	id
 }) {
+	console.log(title);
 	return (
 		<div className="inline-flex m-3 md:m-5 lg:m-5">
 			<div className="max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
