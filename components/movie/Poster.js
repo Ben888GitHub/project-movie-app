@@ -44,7 +44,7 @@ function Poster({ filmImages }) {
 				}}
 				navigation
 				scrollbar={{ draggable: true }}
-				lazy={true}
+				// lazy={true}
 			>
 				{filmImages.map((gallery, idx) => (
 					<SwiperSlide key={idx}>
@@ -52,8 +52,8 @@ function Poster({ filmImages }) {
 							<div className=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 h-[181px] md:[h-281px] lg:h-[281px]">
 								<Image
 									quality={50}
-									// loading="lazy"
-									priority
+									loading="lazy"
+									// priority
 									height={281}
 									width={500}
 									src={`https://image.tmdb.org/t/p/w500${gallery.file_path}`}
