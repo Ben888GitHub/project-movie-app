@@ -9,7 +9,7 @@ function Overview({ isOverview }) {
 				less="Show less"
 				expanded={false}
 				className="font-display text-md md:text-lg lg:text-lg"
-				anchorClass="show-more-less-clickable text-blue-500"
+				anchorClass="show-more-less-clickable text-blue-500 dark:text-blue-700"
 				truncatedEndingComponent={'... '}
 			>
 				<p>{isOverview}</p>
