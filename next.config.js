@@ -1,7 +1,7 @@
 const headers = require('./headers');
 
 const nextConfig = {
-	reactStrictMode: false,
+	reactStrictMode: true,
 	swcMinify: true,
 	async headers() {
 		return [
