@@ -1,5 +1,5 @@
 const headers = require('./headers');
-/** @type {import('next').NextConfig} */
+
 const nextConfig = {
 	reactStrictMode: false,
 	swcMinify: true,
