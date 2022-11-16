@@ -32,7 +32,6 @@ function MovieCard({
 							src={`https://image.tmdb.org/t/p/w500${poster}`}
 							alt={poster}
 							// todo, remove the quality and priority if there's any issue
-
 							// loading="lazy"
 							// placeholder="empty"
 							className="rounded-t-lg cursor-pointer relative"
