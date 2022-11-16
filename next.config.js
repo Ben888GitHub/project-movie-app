@@ -3,6 +3,14 @@ const headers = require('./headers');
 const nextConfig = {
 	reactStrictMode: false,
 	swcMinify: true,
+	async headers() {
+		return [
+			{
+				source: '/(.*)',
+				headers
+			}
+		];
+	},
 	i18n: {
 		locales: ['en'],
 		defaultLocale: 'en'
@@ -14,14 +22,6 @@ const nextConfig = {
 		domains: ['image.tmdb.org'],
 		minimumCacheTTL: 31536000,
 		formats: ['image/webp']
-	},
-	async headers() {
-		return [
-			{
-				source: '/(.*)',
-				headers
-			}
-		];
 	}
 };
 
