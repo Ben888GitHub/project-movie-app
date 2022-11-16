@@ -11,10 +11,7 @@ const nextConfig = {
 			}
 		];
 	},
-	// i18n: {
-	// 	locales: ['en'],
-	// 	defaultLocale: 'en'
-	// },
+
 	env: {
 		API_KEY: process.env.API_KEY
 	},
@@ -22,6 +19,10 @@ const nextConfig = {
 		domains: ['image.tmdb.org'],
 		minimumCacheTTL: 31536000,
 		formats: ['image/webp']
+	},
+	i18n: {
+		locales: ['default', 'en'],
+		defaultLocale: 'default'
 	}
 };
 
