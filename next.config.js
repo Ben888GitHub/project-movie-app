@@ -19,10 +19,6 @@ const nextConfig = {
 		domains: ['image.tmdb.org'],
 		minimumCacheTTL: 31536000,
 		formats: ['image/webp']
-	},
-	i18n: {
-		locales: ['default', 'en'],
-		defaultLocale: 'default'
 	}
 };
 
