@@ -1,3 +1,4 @@
+const headers = require('./headers');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: false,
@@ -13,6 +14,14 @@ const nextConfig = {
 		domains: ['image.tmdb.org'],
 		minimumCacheTTL: 31536000,
 		formats: ['image/webp']
+	},
+	async headers() {
+		return [
+			{
+				source: '/(.*)',
+				headers
+			}
+		];
 	}
 };
 
