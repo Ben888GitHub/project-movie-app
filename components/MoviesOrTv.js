@@ -1,7 +1,8 @@
 import MovieCard from './MovieCard';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
+import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,10 +12,11 @@ import 'swiper/css/scrollbar';
 function MoviesOrTv({ title, filmList }) {
 	return (
 		<div className="container mx-auto text-center">
-			<h1 className="font-display  text-3xl mt-10 md:mt-7 lg:mt-7">
-				{title === 'movie' ? 'Popular Movie' : 'Popular TV'}
-			</h1>
-
+			<Link href={`/${title}/popular`} passHref>
+				<p className="no-underline hover:underline cursor-pointer font-display  text-3xl mt-10 md:mt-7 lg:mt-7">
+					{title === 'movie' ? 'Popular Movie' : 'Popular TV'}
+				</p>
+			</Link>
 			<Swiper
 				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 				spaceBetween={0}
