@@ -25,7 +25,7 @@ function Movie({
 		<>
 			<Head>
 				<title>{filmName}</title>
-				<meta name="description" content={filmName} />
+				<meta name="description" content="film" />
 			</Head>
 			<div className="container mx-auto lg:max-w-6xl md:max-w-6xl mt-3 lg:mt-5 md:mt-5">
 				<Title
