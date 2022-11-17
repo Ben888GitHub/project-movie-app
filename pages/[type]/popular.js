@@ -5,7 +5,7 @@ function Popular({ type }) {
 		<>
 			<Head>
 				<title>{`Popular ${type}`}</title>
-				<meta name="description" content={`Popular ${type}`} />
+				<meta name="description" content="popular" />
 			</Head>
 
 			<p className="text-center text-xl font-display">Popular {type}</p>
