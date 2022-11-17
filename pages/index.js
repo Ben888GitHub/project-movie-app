@@ -1,12 +1,7 @@
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import { Suspense } from 'react';
 import { fetchFilm } from '../api';
 import MoviesOrTv from '../components/MoviesOrTv';
 import WelcomePage from '../components/WelcomePage';
-// const MoviesOrTv = dynamic(() => import('../components/MoviesOrTv'), {
-// 	suspense: true
-// });
 
 export default function Home({ tv, movie }) {
 	return (
