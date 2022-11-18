@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-function Popular({ type }) {
+function Popular({ type, page }) {
 	return (
 		<>
 			<Head>
@@ -8,7 +8,7 @@ function Popular({ type }) {
 				<meta name="description" content="popular" />
 			</Head>
 
-			<p className="text-center text-xl font-display mt-5">Popular {type}</p>
+			<p className="text-center text-2xl font-display mt-5">{`Popular ${type}, page: ${page}`}</p>
 			<div className="flex  justify-center mt-5">
 				<a
 					href="#"
@@ -56,11 +56,12 @@ function Popular({ type }) {
 export default Popular;
 
 export const getStaticProps = async ({ params }) => {
-	const { type } = params;
+	const { type, page } = params;
 
 	return {
 		props: {
-			type
+			type,
+			page
 		}
 	};
 };
