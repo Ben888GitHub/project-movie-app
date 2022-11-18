@@ -9,8 +9,8 @@ function Header() {
 		<nav
 			className={`bg-neutral-800 border-b  border-gray-600 px-2 sm:px-4 py-3 w-full z-20 top-0 left-0 `}
 		>
-			<Link href="/">
-				<div className="container flex flex-wrap justify-between  mx-auto">
+			<div className="container flex flex-wrap justify-between  mx-auto">
+				<Link href="/">
 					<div className="cursor-pointer flex items-center bg-red-700  p-2 rounded-md  text-md md:text-xl lg:text-xl ">
 						<svg
 							className="w-6 h-6 text-slate-200  "
@@ -30,13 +30,13 @@ function Header() {
 							PlexPremier
 						</h1>
 					</div>
-					<div className="flex">
-						<WatchList />
+				</Link>
+				<div className="flex">
+					<WatchList />
 
-						<ColorMode />
-					</div>
+					<ColorMode />
 				</div>
-			</Link>
+			</div>
 		</nav>
 	);
 }
