@@ -22,4 +22,4 @@ const badgeStyleColors = {
 	'Science Fiction': '#854d0e'
 };
 
-export { colors, badgeStyleColors };
+export { badgeStyleColors };

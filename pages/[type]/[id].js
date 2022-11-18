@@ -2,12 +2,12 @@ import Head from 'next/head';
 import { fetchFilmById } from '../../api';
 import { fetchFilmImages } from '../../images_api';
 import { fetchFilmCast } from '../../cast_api';
-import Poster from '../../components/movie/Poster';
-import Title from '../../components/movie/Title';
-import Overview from '../../components/movie/Overview';
-import Genres from '../../components/movie/Genres';
+import Poster from '../../components/film/Poster';
+import Title from '../../components/film/Title';
+import Overview from '../../components/film/Overview';
+import Genres from '../../components/film/Genres';
 import AddToWatchlist from '../../components/AddToWatchlist';
-import Cast from '../../components/movie/Cast';
+import Cast from '../../components/film/Cast';
 
 function Movie({
 	id,
