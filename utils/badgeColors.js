@@ -20,7 +20,7 @@ const badgeStyleColors = {
 	War: '#be185d',
 	Western: '#0f766e',
 	'Science Fiction': '#854d0e',
-	Mystery: '#111827'
+	Mystery: '#0c4a6e'
 };
 
 export { badgeStyleColors };
