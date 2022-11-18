@@ -52,7 +52,6 @@ function Poster({ filmImages }) {
 							<div className=" bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 h-[181px] md:[h-281px] lg:h-[281px]">
 								<Image
 									quality={50}
-									// loading="lazy"
 									priority
 									height={281}
 									width={500}

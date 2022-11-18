@@ -1,7 +1,3 @@
-import { shuffleItems } from './utils/shuffleItems';
-
-// import axios from 'axios';
-
 const api = 'https://api.themoviedb.org/3';
 
 const envFile = process.env.API_KEY;

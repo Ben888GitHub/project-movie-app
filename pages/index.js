@@ -13,25 +13,10 @@ export default function Home({ tv, movie }) {
 			</Head>
 
 			<WelcomePage />
-			{/* <Suspense
-				fallback={
-					<p className="text-center text-lg font-display text-black dark:text-white">
-						Loading movie...
-					</p>
-				}
-			> */}
-			<MoviesOrTv title="movie" filmList={movie} />
-			{/* </Suspense> */}
 
-			{/* <Suspense
-				fallback={
-					<p className="text-center text-lg font-display text-black dark:text-white">
-						Loading tv...
-					</p>
-				}
-			> */}
+			<MoviesOrTv title="movie" filmList={movie} />
+
 			<MoviesOrTv title="tv" filmList={tv} />
-			{/* </Suspense> */}
 		</>
 	);
 }

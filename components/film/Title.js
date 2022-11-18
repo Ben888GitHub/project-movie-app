@@ -1,11 +1,4 @@
-function Title({
-	filmName,
-	tvOrMovie,
-	filmDate,
-	rating,
-	duration,
-	isOverview
-}) {
+function Title({ filmName, tvOrMovie, filmDate, rating, duration }) {
 	return (
 		<div className="flex flex-wrap justify-between px-4 md:px-6">
 			<div>
