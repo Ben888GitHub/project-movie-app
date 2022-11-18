@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
 import { fetchFilm } from '../../../api';
+import Link from 'next/link';
+import AddToWatchlist from '../../../components/AddToWatchlist';
+import Image from 'next/image';
 
 function Popular({ type, page }) {
 	const filmType = type === 'tv' ? 'TV Shows' : 'Movies';
@@ -11,7 +14,7 @@ function Popular({ type, page }) {
 		keepPreviousData: true
 	});
 
-	data && console.log(data);
+	// data && console.log(data);
 
 	return (
 		<>
@@ -60,6 +63,41 @@ function Popular({ type, page }) {
 						></path>
 					</svg>
 				</a>
+			</div>
+			<br />
+			<div className="mx-auto container text-center">
+				{data &&
+					data?.map((film, idx) => (
+						<div key={idx} className="inline-flex m-3 md:m-5 lg:m-5">
+							<div className="max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
+								<Link href={`/${type}/${film.id}`} passHref>
+									<div>
+										<Image
+											src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
+											alt={film.original_title || film.original_name}
+											width={500}
+											height={750}
+											// todo, remove the quality and priority if there's any issue
+											// priority
+											quality={50}
+											loading="lazy"
+											placeholder="empty"
+											className="rounded-t-lg cursor-pointer relative"
+										/>
+									</div>
+								</Link>
+								<div className="p-5 lg:mt-0 md:mt-0 -mt-2 text-left">
+									<p className="mb-2 sm:text-md md:text-xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+										{film.original_title || film.original_name}
+									</p>
+									<p className="mb-3 font-display text-gray-700 dark:text-gray-400">
+										{film.first_air_date || film.release_date}
+									</p>
+									<AddToWatchlist />
+								</div>
+							</div>
+						</div>
+					))}
 			</div>
 		</>
 	);
