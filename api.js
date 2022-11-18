@@ -20,9 +20,10 @@ const fetchFilm = async (title, page) => {
 	};
 	const data = await axios(options).then((res) => res.data);
 
-	const randomFilm = await shuffleItems(data.results);
+	// const randomFilm = await shuffleItems(data.results);
+	const { results } = data;
 
-	return randomFilm;
+	return results;
 };
 
 const fetchFilmById = async (type, id) => {

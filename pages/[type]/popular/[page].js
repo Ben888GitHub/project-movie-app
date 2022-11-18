@@ -102,8 +102,6 @@ function Popular({ type, page }) {
 										alt={film.original_title || film.original_name}
 										width={500}
 										height={750}
-										// todo, remove the quality and priority if there's any issue
-										// priority
 										quality={50}
 										loading="lazy"
 										placeholder="empty"
