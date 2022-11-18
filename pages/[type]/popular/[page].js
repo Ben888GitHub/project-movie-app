@@ -9,8 +9,8 @@ function Popular({ type, page }) {
 	const filmType = type === 'tv' ? 'TV Shows' : 'Movies';
 
 	const { data } = useQuery({
-		queryKey: ['films', type, 2],
-		queryFn: () => fetchFilm(type, 2),
+		queryKey: ['films', type, page],
+		queryFn: () => fetchFilm(type, page),
 		keepPreviousData: true
 	});
 
