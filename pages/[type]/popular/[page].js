@@ -1,6 +1,18 @@
 import Head from 'next/head';
+import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
+import { fetchFilm } from '../../../api';
 
 function Popular({ type, page }) {
+	const filmType = type === 'tv' ? 'TV Shows' : 'Movies';
+
+	const { data } = useQuery({
+		queryKey: ['films', type, 2],
+		queryFn: () => fetchFilm(type, 2),
+		keepPreviousData: true
+	});
+
+	data && console.log(data);
+
 	return (
 		<>
 			<Head>
@@ -8,7 +20,7 @@ function Popular({ type, page }) {
 				<meta name="description" content="popular" />
 			</Head>
 
-			<p className="text-center text-2xl font-display mt-5">{`Popular ${type}, page: ${page}`}</p>
+			<p className="text-center text-2xl font-display mt-5">{`Popular ${filmType}, page: ${page}`}</p>
 			<div className="flex  justify-center mt-5">
 				<a
 					href="#"
@@ -56,10 +68,16 @@ function Popular({ type, page }) {
 export default Popular;
 
 export const getStaticProps = async ({ params }) => {
+	const queryClient = new QueryClient();
 	const { type, page } = params;
+
+	await queryClient.prefetchQuery(['films', type, page], () =>
+		fetchFilm(type, page)
+	);
 
 	return {
 		props: {
+			dehydratedState: dehydrate(queryClient),
 			type,
 			page
 		}
