@@ -19,10 +19,10 @@ const nextConfig = {
 		domains: ['image.tmdb.org'],
 		minimumCacheTTL: 31536000,
 		formats: ['image/webp']
-	},
-	experimental: {
-		scrollRestoration: true
 	}
+	// experimental: {
+	// 	scrollRestoration: true
+	// }
 	// todo, if i18n is enabled then security headers are not scanned online, why?
 	// i18n: {
 	// locales: ['en'],
