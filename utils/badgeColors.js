@@ -19,7 +19,8 @@ const badgeStyleColors = {
 	'Action & Adventure': '#b91c1c',
 	War: '#be185d',
 	Western: '#0f766e',
-	'Science Fiction': '#854d0e'
+	'Science Fiction': '#854d0e',
+	Mystery: '#111827'
 };
 
 export { badgeStyleColors };
