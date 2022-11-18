@@ -18,7 +18,8 @@ const colors = {
 	'Sci-Fi & Fantasy': 'emerald-700',
 	'Action & Adventure': 'red-700',
 	War: 'pink-700',
-	Western: 'teal-700'
+	Western: 'teal-700',
+	'Science Fiction': 'amber-800'
 };
 
 const badgeStyleColors = {
@@ -41,7 +42,8 @@ const badgeStyleColors = {
 	'Sci-Fi & Fantasy': '#047857',
 	'Action & Adventure': '#b91c1c',
 	War: '#be185d',
-	Western: '#0f766e'
+	Western: '#0f766e',
+	'Science Fiction': '#854d0e'
 };
 
 export { colors, badgeStyleColors };
