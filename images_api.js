@@ -16,7 +16,7 @@ const fetchFilmImages = async (type, id) => {
 
 	const { backdrops } = await axios(options).then((res) => res.data);
 
-	const filmImages = shuffleItems(backdrops).slice(0, 10);
+	const filmImages = backdrops.slice(0, 10);
 
 	return { filmImages };
 };
