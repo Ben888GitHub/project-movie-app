@@ -10,8 +10,8 @@ function Popular({ type, page }) {
 	const { data } = useQuery({
 		queryKey: ['films', type, page],
 		queryFn: () => fetchFilm(type, page),
-		keepPreviousData: true,
-		enabled: false
+		keepPreviousData: true
+		// enabled: false
 	});
 
 	console.log(type);
@@ -58,8 +58,7 @@ export const getStaticProps = async ({ params }) => {
 	};
 };
 
-export const getStaticPaths = (path) => {
-	console.log(path);
+export const getStaticPaths = () => {
 	return {
 		paths: [],
 		fallback: 'blocking'

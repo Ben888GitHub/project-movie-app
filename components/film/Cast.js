@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 function Cast({ cast }) {
-	console.log(cast);
-
 	return (
 		<>
 			<p className="text-2xl font-medium px-4 mt-7 mb-1">Main Cast</p>
