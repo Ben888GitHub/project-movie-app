@@ -13,7 +13,9 @@ function Popular({ type, page }) {
 		keepPreviousData: true
 	});
 
-	// console.log(data);
+	console.log(type);
+	console.log(page);
+	console.log(data);
 
 	return (
 		<>
