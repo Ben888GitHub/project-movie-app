@@ -15,7 +15,7 @@ function Popular({ type, page }) {
 
 	console.log(type);
 	console.log(page);
-	console.log(data);
+	// console.log(data);
 
 	return (
 		<>
