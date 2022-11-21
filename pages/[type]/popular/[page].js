@@ -11,11 +11,12 @@ function Popular({ type, page }) {
 		queryKey: ['films', type, page],
 		queryFn: () => fetchFilm(type, page),
 		keepPreviousData: true,
-		enabled: !!page
+		enabled: false
 	});
 
 	console.log(type);
 	console.log(page);
+	console.log(!!page);
 	// console.log(data);
 
 	return (
