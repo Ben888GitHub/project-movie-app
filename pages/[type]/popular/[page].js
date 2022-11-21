@@ -11,13 +11,7 @@ function Popular({ type, page }) {
 		queryKey: ['films', type, page],
 		queryFn: () => fetchFilm(type, page),
 		keepPreviousData: true
-		// enabled: false
 	});
-
-	console.log(type);
-	console.log(page);
-	console.log(!!page);
-	// console.log(data);
 
 	return (
 		<>
@@ -30,7 +24,7 @@ function Popular({ type, page }) {
 			<Pagination page={page} type={type} />
 			<br />
 			<div className="mx-auto container text-center">
-				{data.map((film, idx) => (
+				{data?.map((film, idx) => (
 					<FilmPages key={idx} film={film} type={type} />
 				))}
 			</div>

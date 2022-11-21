@@ -14,8 +14,7 @@ function FilmPages({ film, type }) {
 							width={500}
 							height={750}
 							quality={50}
-							// loading="lazy"
-							priority
+							loading="lazy"
 							placeholder="empty"
 							className="rounded-t-lg cursor-pointer relative"
 						/>
