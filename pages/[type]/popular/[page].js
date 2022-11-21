@@ -13,6 +13,8 @@ function Popular({ type, page }) {
 		keepPreviousData: true
 	});
 
+	// console.log(data);
+
 	return (
 		<>
 			<Head>
@@ -52,7 +54,8 @@ export const getStaticProps = async ({ params }) => {
 	};
 };
 
-export const getStaticPaths = () => {
+export const getStaticPaths = (path) => {
+	console.log(path);
 	return {
 		paths: [],
 		fallback: 'blocking'
