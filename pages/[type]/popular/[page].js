@@ -26,7 +26,7 @@ function Popular({ type, page }) {
 			<Pagination page={page} type={type} />
 			<br />
 			<div className="mx-auto container text-center">
-				{data?.map((film, idx) => (
+				{data.map((film, idx) => (
 					<FilmPages key={idx} film={film} type={type} />
 				))}
 			</div>
