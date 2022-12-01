@@ -41,7 +41,7 @@ function SearchFilm({ open, setOpen }) {
 			<Dialog
 				as="div"
 				className=" relative z-10"
-				initialFocus={cancelButtonRef}
+				// initialFocus={cancelButtonRef}
 				onClose={() => setOpen(false)}
 			>
 				<Transition.Child
