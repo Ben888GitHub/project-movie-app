@@ -36,7 +36,7 @@ function MovieCard({
 					<p className="mb-3 font-display text-gray-700 dark:text-gray-400">
 						{tv_date || movie_date}
 					</p>
-					<AddToWatchlist />
+					{id && <AddToWatchlist name={name} title={title} />}
 				</div>
 			</div>
 		</div>
