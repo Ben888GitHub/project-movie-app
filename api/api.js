@@ -5,10 +5,7 @@ const api = 'https://api.themoviedb.org/3';
 const envFile = process.env.API_KEY;
 
 const fetchFilm = async (title, page) => {
-	// const axios = (await import('axios')).default;
 	const film = title === 'tv' ? 'tv' : 'movie';
-
-	console.log(film);
 
 	const options = {
 		method: 'GET',
@@ -26,7 +23,6 @@ const fetchFilm = async (title, page) => {
 };
 
 const fetchFilmById = async (type, id) => {
-	const axios = (await import('axios')).default;
 	const options = {
 		method: 'GET',
 		url: `${api}/${type}/${id}`,
