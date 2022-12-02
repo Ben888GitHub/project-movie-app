@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 				defaultOptions: {
 					queries: {
 						refetchOnWindowFocus: false,
-						refetchOnMount: false
+						refetchOnMount: true
 					}
 				}
 			})
