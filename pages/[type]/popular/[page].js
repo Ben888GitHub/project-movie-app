@@ -14,7 +14,7 @@ function Popular() {
 
 	const { data } = useQuery({
 		queryKey: ['films', type, page],
-		queryFn: async () => await fetchFilm(type, page),
+		queryFn: () => fetchFilm(type, page),
 		keepPreviousData: true,
 		enabled: false // this is to prevent auto-refetch
 	});
@@ -49,9 +49,8 @@ export const getStaticProps = async ({ params }) => {
 	const queryClient = new QueryClient();
 	const { type, page } = params;
 
-	await queryClient.prefetchQuery(
-		['films', type, page],
-		async () => await fetchFilm(type, page)
+	await queryClient.prefetchQuery(['films', type, page], () =>
+		fetchFilm(type, page)
 	);
 
 	return {
