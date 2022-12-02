@@ -3,8 +3,13 @@ import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
 import { fetchFilm } from '../../../api';
 import Pagination from '../../../components/filmPages/Pagination';
 import FilmPages from '../../../components/filmPages/FilmPages';
+import { useRouter } from 'next/router';
 
-function Popular({ type, page }) {
+function Popular() {
+	const router = useRouter();
+
+	const { type, page } = router.query;
+
 	const filmType = type === 'tv' ? 'TV Shows' : 'Movies';
 
 	const { data } = useQuery({
@@ -14,8 +19,9 @@ function Popular({ type, page }) {
 		enabled: false // this is to prevent auto-refetch
 	});
 
+	router && console.log(router);
 	// console.log(data);
-	// data && console.log(data);
+	data && console.log(data);
 
 	return (
 		<>
