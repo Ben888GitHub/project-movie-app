@@ -51,17 +51,19 @@ function SearchFilm({ open, setOpen }) {
 	// data && console.log(data);
 
 	// todo, optimize this code
-	const filteredFilm = data?.results.filter(
-		(film) =>
-			film.name
-				?.toLowerCase()
-				.replace(/\s+/g, '')
-				.includes(queryFilm?.toLowerCase().replace(/\s+/g, '')) ||
-			film.original_title
-				?.toLowerCase()
-				.replace(/\s+/g, '')
-				.includes(queryFilm?.toLowerCase().replace(/\s+/g, ''))
-	);
+	const filteredFilm = data?.results
+		.filter(
+			(film) =>
+				film.name
+					?.toLowerCase()
+					.replace(/\s+/g, '')
+					.includes(queryFilm?.toLowerCase().replace(/\s+/g, '')) ||
+				film.original_title
+					?.toLowerCase()
+					.replace(/\s+/g, '')
+					.includes(queryFilm?.toLowerCase().replace(/\s+/g, ''))
+		)
+		.filter((film) => film.media_type === 'tv' || film.media_type === 'movie');
 
 	const filteredPeople =
 		query === ''
