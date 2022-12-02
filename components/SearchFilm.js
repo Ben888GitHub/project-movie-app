@@ -2,6 +2,7 @@ import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchSearchFilm } from '../search_film_api';
+import Link from 'next/link';
 
 function SearchFilm({ open, setOpen }) {
 	const [queryFilm, setQueryFilm] = useState('');
@@ -78,6 +79,7 @@ function SearchFilm({ open, setOpen }) {
 											displayValue={queryFilm}
 											onChange={(event) => setQueryFilm(event.target.value)}
 										/>
+
 										<button
 											onClick={() => {
 												setQueryFilm('');
@@ -100,6 +102,27 @@ function SearchFilm({ open, setOpen }) {
 												/>
 											</svg>
 										</button>
+										{/* {selected && (
+											<button
+												onClick={() => console.log(`Link to film`)}
+												className="absolute inset-y-0 right-8 flex items-center pr-2"
+											>
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="none"
+													viewBox="0 0 24 24"
+													strokeWidth={1.5}
+													stroke="currentColor"
+													className="w-6 h-6"
+												>
+													<path
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+													/>
+												</svg>
+											</button>
+										)} */}
 									</div>
 									<Transition afterLeave={() => setQueryFilm('')}>
 										{queryFilm && (
@@ -108,22 +131,26 @@ function SearchFilm({ open, setOpen }) {
 													<span className="text-center">Loading...</span>
 												) : (
 													filteredFilm?.slice(0, 7).map((film, idx) => (
-														<Combobox.Option
+														<Link
+															href={`/${film.media_type}/${film.id}`}
 															key={idx}
-															className={({ active }) =>
-																`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-																	active
-																		? 'bg-teal-600 text-white'
-																		: 'text-gray-900  dark:text-white'
-																}`
-															}
-															// className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
-															value={film.name || film.original_title}
-															onClick={() => console.log(film)}
-															onKeyDown={(e) => console.log('Hello')}
 														>
-															{film.name || film.original_title}
-														</Combobox.Option>
+															<Combobox.Option
+																className={({ active }) =>
+																	`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
+																		active
+																			? 'bg-teal-600 text-white'
+																			: 'text-gray-900  dark:text-white'
+																	}`
+																}
+																// className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
+																value={film.name || film.original_title}
+																onClick={() => console.log(film)}
+																onChange={(e) => console.log('Hello')}
+															>
+																{film.name || film.original_title}
+															</Combobox.Option>
+														</Link>
 													))
 												)}
 											</Combobox.Options>
