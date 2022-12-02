@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
-import { fetchFilm } from '../../../api';
+import { fetchFilm } from '../../../api/api';
 import Pagination from '../../../components/filmPages/Pagination';
 import FilmPages from '../../../components/filmPages/FilmPages';
 

@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchSearchFilm } from '../../search_film_api';
+import { fetchSearchFilm } from '../../api/search_film_api';
 import useFilterFilm from './hook/useFilterFilm';
 import SearchInput from './SearchInput';
 import SearchFilmOptions from './SearchFilmOptions';

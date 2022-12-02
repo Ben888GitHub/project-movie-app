@@ -16,7 +16,6 @@ const fetchFilm = async (title, page) => {
 	};
 	const data = await axios(options).then((res) => res.data);
 
-	// const randomFilm = await shuffleItems(data.results);
 	const { results } = data;
 
 	return results;

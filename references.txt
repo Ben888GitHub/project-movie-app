@@ -29,3 +29,9 @@ https://stackoverflow.com/questions/70037615/an-array-of-promises-is-returned-wh
 
 NextJs Slow Image
 https://github.com/vercel/next.js/discussions/21294
+
+Focus Trap problem
+https://github.com/tailwindlabs/headlessui/issues/265
+
+TMDB Search Multiple
+https://www.themoviedb.org/talk/5821199dc3a36814dc001fb6 

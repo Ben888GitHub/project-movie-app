@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { fetchFilm } from '../api';
+import { fetchFilm } from '../api/api';
 import MoviesOrTv from '../components/MoviesOrTv';
 import WelcomePage from '../components/WelcomePage';
 
