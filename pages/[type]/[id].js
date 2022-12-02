@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { fetchFilmById } from '../../api/api';
+import { fetchFilmById } from '../../api';
 import { fetchFilmImages } from '../../api/images_api';
 import { fetchFilmCast } from '../../api/cast_api';
 import Poster from '../../components/film/Poster';
