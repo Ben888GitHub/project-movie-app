@@ -8,6 +8,8 @@ const fetchFilm = async (title, page) => {
 	// const axios = (await import('axios')).default;
 	const film = title === 'tv' ? 'tv' : 'movie';
 
+	console.log(film);
+
 	const options = {
 		method: 'GET',
 		url: `${api}/${film}/popular`,
@@ -19,8 +21,6 @@ const fetchFilm = async (title, page) => {
 	const data = await axios(options).then((res) => res.data);
 
 	// const { results } = data;
-
-	console.log(data.results);
 
 	return data;
 };

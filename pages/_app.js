@@ -14,8 +14,8 @@ function MyApp({ Component, pageProps }) {
 			new QueryClient({
 				defaultOptions: {
 					queries: {
-						refetchOnWindowFocus: false
-						// refetchOnMount: false
+						refetchOnWindowFocus: false,
+						refetchOnMount: false
 					}
 				}
 			})
