@@ -5,10 +5,10 @@ import Pagination from '../../../components/filmPages/Pagination';
 import FilmPages from '../../../components/filmPages/FilmPages';
 import { useRouter } from 'next/router';
 
-function Popular() {
+function Popular({ type, page }) {
 	const router = useRouter();
 
-	const { type, page } = router.query;
+	// const { type, page } = router.query;
 
 	const filmType = type === 'tv' ? 'TV Shows' : 'Movies';
 
