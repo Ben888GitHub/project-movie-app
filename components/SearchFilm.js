@@ -1,23 +1,15 @@
 import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { useQuery } from '@tanstack/react-query';
+import { fetchSearchFilm } from '../search_film_api';
 
 function SearchFilm({ open, setOpen }) {
 	const [queryFilm, setQueryFilm] = useState('');
 	const [selected, setSelected] = useState('');
-	const cancelButtonRef = useRef(null);
-
-	const fetchFilm = async () => {
-		const movies = await fetch(
-			`https://api.themoviedb.org/3/search/multi?api_key=456ec94d71f9702ddcbbc1166b40f922&language=en-US&query=${queryFilm}`
-		);
-		const moviesJson = await movies.json();
-		return moviesJson;
-	};
 
 	const { data, isLoading } = useQuery({
 		queryKey: ['films', queryFilm],
-		queryFn: () => fetchFilm(queryFilm),
+		queryFn: () => fetchSearchFilm(queryFilm),
 		enabled: Boolean(queryFilm), // this is to prevent auto-refetch
 		refetchOnWindowFocus: false,
 		refetchOnMount: true,
@@ -128,6 +120,7 @@ function SearchFilm({ open, setOpen }) {
 															// className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
 															value={film.name || film.original_title}
 															onClick={() => console.log(film)}
+															onKeyDown={(e) => console.log('Hello')}
 														>
 															{film.name || film.original_title}
 														</Combobox.Option>
