@@ -112,23 +112,27 @@ function SearchFilm({ open, setOpen }) {
 									<Transition afterLeave={() => setQueryFilm('')}>
 										{queryFilm && (
 											<Combobox.Options className="dark:bg-[#1a202c] max-h-60 w-full overflow-auto rounded-b-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-												{filteredFilm?.slice(0, 7).map((film, idx) => (
-													<Combobox.Option
-														key={idx}
-														className={({ active }) =>
-															`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-																active
-																	? 'bg-teal-600 text-white'
-																	: 'text-gray-900  dark:text-white'
-															}`
-														}
-														// className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
-														value={film.name || film.original_title}
-														onClick={() => console.log(film)}
-													>
-														{film.name || film.original_title}
-													</Combobox.Option>
-												))}
+												{isLoading ? (
+													<span className="text-center">Loading...</span>
+												) : (
+													filteredFilm?.slice(0, 7).map((film, idx) => (
+														<Combobox.Option
+															key={idx}
+															className={({ active }) =>
+																`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
+																	active
+																		? 'bg-teal-600 text-white'
+																		: 'text-gray-900  dark:text-white'
+																}`
+															}
+															// className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
+															value={film.name || film.original_title}
+															onClick={() => console.log(film)}
+														>
+															{film.name || film.original_title}
+														</Combobox.Option>
+													))
+												)}
 											</Combobox.Options>
 										)}
 									</Transition>
