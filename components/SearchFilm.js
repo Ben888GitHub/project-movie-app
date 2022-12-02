@@ -116,12 +116,36 @@ function SearchFilm({ open, setOpen }) {
 							<Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
 								{/* <Combobox value={selected} onChange={setSelected}> */}
 								<Combobox value={selected} onChange={setSelected}>
-									<Combobox.Input
-										placeholder="Search TV Shows or Movies"
-										className="font-medium bg-gray-50  text-gray-900 text-md rounded-t-lg  w-full p-2.5 dark:bg-gray-600  dark:placeholder-gray-400 dark:text-white"
-										value={queryFilm}
-										onChange={(event) => setQueryFilm(event.target.value)}
-									/>
+									<div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+										<Combobox.Input
+											placeholder="Search TV Shows or Movies"
+											className="font-medium bg-gray-50  text-gray-900 text-md rounded-t-lg  w-full p-2.5 dark:bg-gray-600  dark:placeholder-gray-400 dark:text-white"
+											value={queryFilm}
+											onChange={(event) => setQueryFilm(event.target.value)}
+										/>
+										<button
+											onClick={() => {
+												setQueryFilm('');
+												setSelected('');
+											}}
+											className="absolute inset-y-0 right-0 flex items-center pr-2"
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												strokeWidth={1.5}
+												stroke="currentColor"
+												className="w-6 h-6"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="M6 18L18 6M6 6l12 12"
+												/>
+											</svg>
+										</button>
+									</div>
 									<Transition
 										// leave="transition ease-in duration-100"
 										// leaveFrom="opacity-100"
