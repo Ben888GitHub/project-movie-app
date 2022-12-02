@@ -20,6 +20,8 @@ const fetchFilm = async (title, page) => {
 
 	// const { results } = data;
 
+	console.log(data.results);
+
 	return data;
 };
 
