@@ -79,11 +79,11 @@ function SearchFilm({ open, setOpen }) {
 							<Dialog.Panel className="w-full relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
 								{/* <Combobox value={selected} onChange={setSelected}> */}
 								<Combobox value={selected} onChange={setSelected}>
-									<div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300">
+									<div className="relative w-full cursor-default overflow-hidden rounded-t-lg bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300">
 										<Combobox.Input
 											placeholder="Search TV Shows or Movies"
-											className="font-medium bg-gray-50  text-gray-900 text-md rounded-t-lg  w-full p-2.5 dark:bg-gray-600  dark:placeholder-gray-400 dark:text-white"
-											value={queryFilm}
+											className=" font-medium bg-gray-50  text-gray-900 text-md rounded-t-lg  w-full p-2.5 dark:bg-gray-600  dark:placeholder-gray-400 dark:text-white"
+											displayValue={queryFilm}
 											onChange={(event) => setQueryFilm(event.target.value)}
 										/>
 										<button
