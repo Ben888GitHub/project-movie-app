@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
-import { fetchFilm } from '../../../api';
+import { fetchFilm } from '../../../api/api';
 import Pagination from '../../../components/filmPages/Pagination';
 import FilmPages from '../../../components/filmPages/FilmPages';
 import { useRouter } from 'next/router';
@@ -21,7 +21,7 @@ function Popular() {
 
 	router && console.log(router);
 	// console.log(data);
-	data && console.log(data);
+	data && console.log(data?.results);
 
 	return (
 		<>
@@ -34,7 +34,7 @@ function Popular() {
 			<Pagination page={page} type={type} />
 			<br />
 			<div className="mx-auto container text-center">
-				{data?.map((film, idx) => (
+				{data?.results?.map((film, idx) => (
 					<FilmPages key={idx} film={film} type={type} />
 				))}
 			</div>

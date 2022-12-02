@@ -16,9 +16,9 @@ const fetchFilm = async (title, page) => {
 	};
 	const data = await axios(options).then((res) => res.data);
 
-	const { results } = data;
+	// const { results } = data;
 
-	return results;
+	return data;
 };
 
 const fetchFilmById = async (type, id) => {
