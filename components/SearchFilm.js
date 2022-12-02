@@ -131,14 +131,14 @@ function SearchFilm({ open, setOpen }) {
 												{filteredFilm?.slice(0, 7).map((film, idx) => (
 													<Combobox.Option
 														key={idx}
-														// className={({ active }) =>
-														// 	`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-														// 		active
-														// 			? 'bg-teal-600 text-white'
-														// 			: 'text-gray-900  dark:text-white'
-														// 	}`
-														// }
-														className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
+														className={({ active }) =>
+															`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
+																active
+																	? 'bg-teal-600 text-white'
+																	: 'text-gray-900  dark:text-white'
+															}`
+														}
+														// className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
 														value={film.name || film.original_title}
 														onClick={() => console.log(film)}
 													>
