@@ -65,7 +65,7 @@ function SearchFilm({ open, setOpen }) {
 				</Transition.Child>
 				<div className="fixed inset-0 z-10 overflow-y-auto ">
 					{/* <div className=" flex h-[200px] md:h-[270px] lg:h-[270px] items-end justify-center p-4 text-center sm:items-center sm:p-0"> */}
-					<div className=" flex mt-20 md:mt-0 lg:mt-0 min-h-min md:min-h-full   lg:min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+					<div className=" flex mt-52 md:mt-0 lg:mt-0 min-h-max md:min-h-full   lg:min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
 						<Transition.Child
 							as={Fragment}
 							enter="ease-out duration-300"
