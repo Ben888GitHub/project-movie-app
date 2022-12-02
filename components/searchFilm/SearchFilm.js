@@ -1,8 +1,9 @@
 import { Fragment, useState, useRef } from 'react';
 import { Dialog, Transition, Combobox } from '@headlessui/react';
 import { useQuery } from '@tanstack/react-query';
-import { fetchSearchFilm } from '../search_film_api';
+import { fetchSearchFilm } from '../../search_film_api';
 import Link from 'next/link';
+import useFilterFilm from './useFilterFilm';
 
 function SearchFilm({ open, setOpen }) {
 	const [queryFilm, setQueryFilm] = useState('');
@@ -16,21 +17,7 @@ function SearchFilm({ open, setOpen }) {
 		refetchOnMount: true,
 		keepPreviousData: true
 	});
-
-	// todo, optimize this code
-	const filteredFilm = data?.results
-		.filter(
-			(film) =>
-				film.name
-					?.toLowerCase()
-					.replace(/\s+/g, '')
-					.includes(queryFilm?.toLowerCase().replace(/\s+/g, '')) ||
-				film.original_title
-					?.toLowerCase()
-					.replace(/\s+/g, '')
-					.includes(queryFilm?.toLowerCase().replace(/\s+/g, ''))
-		)
-		.filter((film) => film.media_type === 'tv' || film.media_type === 'movie');
+	const { filteredFilm } = useFilterFilm(data, queryFilm);
 
 	return (
 		<Transition.Root show={open} appear as={Fragment}>

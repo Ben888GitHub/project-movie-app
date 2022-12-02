@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import threed from '../images/three_d.webp';
-import SearchFilm from './SearchFilm';
+import SearchFilm from './searchFilm/SearchFilm';
 
 function WelcomePage() {
 	const [open, setOpen] = useState(false);
