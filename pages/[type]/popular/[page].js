@@ -16,6 +16,7 @@ function Popular() {
 		queryKey: ['films', type, page],
 		queryFn: () => fetchFilm(type, page),
 		keepPreviousData: true,
+		refetchOnMount: type === 'tv' && true,
 		enabled: false // this is to prevent auto-refetch
 	});
 

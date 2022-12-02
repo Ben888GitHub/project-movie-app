@@ -12,7 +12,7 @@ const fetchFilm = async (title, page) => {
 		method: 'GET',
 		url: `${api}/${film}/popular`,
 		params: {
-			api_key: '456ec94d71f9702ddcbbc1166b40f922',
+			api_key: envFile,
 			page: page
 		}
 	};
