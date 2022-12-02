@@ -78,7 +78,12 @@ function SearchFilm({ open, setOpen }) {
 			<Dialog
 				as="div"
 				className=" relative z-10"
-				onClose={() => setOpen(false)}
+				// todo, optimize code below
+				onClose={() => {
+					setOpen(false);
+					setQueryFilm('');
+					setSelected('');
+				}}
 			>
 				<Transition.Child
 					as={Fragment}
@@ -88,6 +93,7 @@ function SearchFilm({ open, setOpen }) {
 					leave="ease-in duration-200"
 					leaveFrom="opacity-100"
 					leaveTo="opacity-0"
+					// afterLeave={() => setQueryFilm('')}
 				>
 					<div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
 				</Transition.Child>
@@ -102,6 +108,7 @@ function SearchFilm({ open, setOpen }) {
 							leave="ease-in duration-200"
 							leaveFrom="opacity-100 translate-y-0 sm:scale-100"
 							leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+							// afterLeave={() => setQueryFilm('')}
 						>
 							{/* This is to adjust the Dialog size and shape */}
 							<Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
@@ -109,14 +116,14 @@ function SearchFilm({ open, setOpen }) {
 								<Combobox value={selected} onChange={setSelected}>
 									<Combobox.Input
 										placeholder="Search TV Shows or Movies"
-										className="font-medium bg-gray-50  text-gray-900 text-md rounded-t-md  w-full p-2.5 dark:bg-gray-600  dark:placeholder-gray-400 dark:text-white"
-										// value={queryFilm}
+										className="font-medium bg-gray-50  text-gray-900 text-md rounded-t-lg  w-full p-2.5 dark:bg-gray-600  dark:placeholder-gray-400 dark:text-white"
+										value={queryFilm}
 										onChange={(event) => setQueryFilm(event.target.value)}
 									/>
 									<Transition
-										leave="transition ease-in duration-100"
-										leaveFrom="opacity-100"
-										leaveTo="opacity-0"
+										// leave="transition ease-in duration-100"
+										// leaveFrom="opacity-100"
+										// leaveTo="opacity-0"
 										afterLeave={() => setQueryFilm('')}
 									>
 										{queryFilm && (
@@ -124,13 +131,14 @@ function SearchFilm({ open, setOpen }) {
 												{filteredFilm?.slice(0, 7).map((film, idx) => (
 													<Combobox.Option
 														key={idx}
-														className={({ active }) =>
-															`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
-																active
-																	? 'bg-teal-600 text-white'
-																	: 'text-gray-900  dark:text-white'
-															}`
-														}
+														// className={({ active }) =>
+														// 	`font-display relative cursor-pointer select-none py-2 pl-10 pr-4 ${
+														// 		active
+														// 			? 'bg-teal-600 text-white'
+														// 			: 'text-gray-900  dark:text-white'
+														// 	}`
+														// }
+														className="font-display  cursor-pointer  py-2 pl-10 pr-4 text-gray-900  dark:text-white"
 														value={film.name || film.original_title}
 														onClick={() => console.log(film)}
 													>
