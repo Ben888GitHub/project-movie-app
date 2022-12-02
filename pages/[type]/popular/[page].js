@@ -15,7 +15,7 @@ function Popular() {
 	const { data } = useQuery({
 		queryKey: ['films', type, page],
 		queryFn: () => fetchFilm(type, page),
-		keepPreviousData: true,
+		keepPreviousData: false,
 		enabled: false // this is to prevent auto-refetch
 	});
 

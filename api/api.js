@@ -1,9 +1,11 @@
+import axios from 'axios';
+
 const api = 'https://api.themoviedb.org/3';
 
 const envFile = process.env.API_KEY;
 
 const fetchFilm = async (title, page) => {
-	const axios = (await import('axios')).default;
+	// const axios = (await import('axios')).default;
 	const film = title === 'tv' ? 'tv' : 'movie';
 
 	const options = {
