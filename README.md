@@ -42,7 +42,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project-star2">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -65,7 +65,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Project :star2:
 
 <div align="center"> 
   <img src="/images/project-ss.png" alt="screenshot" />
