@@ -39,7 +39,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <h3>Table of Contents</h3>
+  <summary>Table of Contents</summary>
   <ol>
     <li>
       <a href="#about-the-project-star2">About The Project</a>
