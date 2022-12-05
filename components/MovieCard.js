@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import AddToWatchlist from './AddToWatchlist';
 
 function MovieCard({
 	tvOrMovie,
