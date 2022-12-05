@@ -45,6 +45,7 @@
       <a href="#about-the-project-star2">About The Project</a>
       <ul>
         <li><a href="#tech-stack-computer">Tech Stack</a></li>
+        <li><a href="#features-dart">Features :dart:</a></li>
       </ul>
     </li>
     <li>
@@ -80,6 +81,14 @@
 - [![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 - [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 - [![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)](https://tanstack.com/query/v4/docs/overview)
+
+<!-- Features -->
+
+### Features :dart:
+
+- Feature 1
+- Feature 2
+- Feature 3
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
 
