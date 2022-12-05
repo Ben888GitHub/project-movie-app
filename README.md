@@ -45,7 +45,7 @@
       <a href="#about-the-project-star2">About The Project</a>
       <ul>
         <li><a href="#tech-stack-computer">Tech Stack</a></li>
-        <li><a href="#features-dart">Features :dart:</a></li>
+        <li><a href="#features-dart">Features</a></li>
       </ul>
     </li>
     <li>
