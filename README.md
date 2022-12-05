@@ -28,11 +28,11 @@
 </p>
 
 <h4>
-    <a href="https://vercel.com/ben888github/project-movie-app">View Demo</a>
+    <a href="https://project-movie-app.vercel.app/">View Demo</a>
   <span> · </span>
-    <a href="https://github.com/Louis3797/project-movie-app/issues/">Report Bug</a>
+    <a href="https://github.com/Ben888GitHub/project-movie-app/issues/">Report Bug</a>
   <span> · </span>
-    <a href="https://github.com/Louis3797/project-movie-app/issues/">Request Feature</a>
+    <a href="https://github.com/Ben888GitHub/project-movie-app/issues/">Request Feature</a>
   </h4>
 
 </div>
