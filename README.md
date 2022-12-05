@@ -39,7 +39,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Table of Contents :notebook_with_decorative_cover:</summary>
   <ol>
     <li>
       <a href="#about-the-project-star2">About The Project</a>
