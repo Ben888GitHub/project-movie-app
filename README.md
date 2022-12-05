@@ -1,6 +1,9 @@
 <div align="center">
 <img src="images/movie.png" alt="movie" width="200" height="auto" />
-<h1>TMDB Film Data</h1>
+<h1>TMDB Film Explorer</h1>
+<p>
+    TMDB Film Explorer App built with NextJS & TailwindCSS
+  </p>
 </div>
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
