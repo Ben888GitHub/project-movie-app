@@ -63,6 +63,12 @@
   </ol>
 </details>
 
+<!-- ABOUT THE PROJECT -->
+
+## :star2: About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
