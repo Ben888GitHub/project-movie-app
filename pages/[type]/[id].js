@@ -6,7 +6,6 @@ import Poster from '../../components/film/Poster';
 import Title from '../../components/film/Title';
 import Overview from '../../components/film/Overview';
 import Genres from '../../components/film/Genres';
-import AddToWatchlist from '../../components/AddToWatchlist';
 import Cast from '../../components/film/Cast';
 
 function Movie({
@@ -44,9 +43,6 @@ function Movie({
 				<div className="flex-none md:flex lg:flex">
 					<div>
 						<Genres genres={genres} />
-					</div>
-					<div className="ml-5 mt-4 lg:ml-auto md:ml-auto lg:-mt-2 md:-mt-2  ">
-						<AddToWatchlist />
 					</div>
 				</div>
 				<Cast cast={cast} />

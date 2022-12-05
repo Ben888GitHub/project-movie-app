@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import WatchList from './WatchList';
 
 const ColorMode = dynamic(() => import('./ColorMode'), { ssr: false });
 
@@ -31,11 +30,7 @@ function Header() {
 						</h1>
 					</div>
 				</Link>
-				<div className="flex">
-					<WatchList />
-
-					<ColorMode />
-				</div>
+				<ColorMode />
 			</div>
 		</nav>
 	);
