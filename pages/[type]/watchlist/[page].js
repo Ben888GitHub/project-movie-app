@@ -13,8 +13,6 @@ function Watchlist({ type, page }) {
 		enabled: false // this is to prevent auto-refetch
 	});
 
-	data && console.log(data);
-
 	return (
 		<>
 			<Head>
