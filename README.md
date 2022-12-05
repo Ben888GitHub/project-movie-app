@@ -1,5 +1,6 @@
 <div align="center">
 <img src="images/movie.png" alt="movie" width="200" height="auto" />
+<h1>TMDB Film Data</h1>
 </div>
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
