@@ -22,8 +22,24 @@ function Watchlist({ type, page }) {
 				<meta name="description" content="popular" />
 			</Head>
 
-			<p className="text-center text-2xl font-display mt-5">{`${filmType} Watchlist, page: ${page}`}</p>
-			<br />
+			{/* <p className="text-center text-2xl font-display mt-5">{`Page: ${page}`}</p> */}
+			<div className="flex  justify-center ">
+				<p
+					className={`${
+						type === 'movie' && `font-semibold`
+					} text-center text-2xl font-display mt-5 hover:underline cursor-pointer `}
+				>
+					Movies
+				</p>
+				<p className="text-center text-2xl font-display mt-5 ml-3 mr-3">|</p>
+				<p
+					className={`${
+						type === 'tv' && `font-semibold`
+					} text-center text-2xl font-display mt-5 hover:underline cursor-pointer `}
+				>
+					TV Shows
+				</p>
+			</div>
 			<div className="mx-auto container text-center">
 				{data?.results?.map((film, idx) => (
 					<FilmPages key={idx} film={film} type={type} />
@@ -39,9 +55,6 @@ export const getStaticProps = async ({ params }) => {
 	const queryClient = new QueryClient();
 	const { type, page } = params;
 
-	// const { data } = await fetchWatchlist(type, page);
-
-	// data && console.log(data);
 	await queryClient.prefetchQuery(['films', type, page], () =>
 		fetchWatchlist(type, page)
 	);
