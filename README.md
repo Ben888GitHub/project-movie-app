@@ -44,7 +44,7 @@
     <li>
       <a href="#about-the-project-star2">About The Project</a>
       <ul>
-        <li><a href="#tech-stack-💻">Tech Stack</a></li>
+        <li><a href="#tech-stack-computer">Tech Stack</a></li>
       </ul>
     </li>
     <li>
@@ -73,7 +73,7 @@
 
 <!-- TechStack -->
 
-### Tech Stack 💻
+### Tech Stack :computer:
 
 - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 - [![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
