@@ -3,10 +3,12 @@ import Link from 'next/link';
 import AddToWatchlist from '../AddToWatchlist';
 
 function FilmPages({ film, type }) {
+	const mediaType = type === 'tvshows' ? 'tv' : 'movie';
+
 	return (
 		<div className="inline-flex m-3 md:m-5 lg:m-5">
 			<div className="max-w-[165px] md:max-w-xs lg:max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700  ">
-				<Link href={`/${type}/${film.id}`} passHref>
+				<Link href={`/${mediaType}/${film.id}`} passHref>
 					<div>
 						<Image
 							src={`https://image.tmdb.org/t/p/w500${film.poster_path}`}
