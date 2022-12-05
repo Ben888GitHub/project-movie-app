@@ -65,7 +65,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## :star2: About The Project
+## About The Project
 
 <div align="center"> 
   <img src="/images/project-ss.png" alt="screenshot" />
