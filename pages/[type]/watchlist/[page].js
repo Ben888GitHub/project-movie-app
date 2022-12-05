@@ -4,7 +4,7 @@ import { useQuery, dehydrate, QueryClient } from '@tanstack/react-query';
 import FilmPages from '../../../components/filmPages/FilmPages';
 
 function Watchlist({ type, page }) {
-	const filmType = type === 'tv' ? 'TV Shows' : 'Movies';
+	const filmType = type === 'tvshows' ? 'TV Shows' : 'Movies';
 
 	const { data } = useQuery({
 		queryKey: ['films', type, page],
@@ -24,7 +24,7 @@ function Watchlist({ type, page }) {
 			<div className="flex  justify-center ">
 				<p
 					className={`${
-						type === 'movie' && `font-semibold`
+						type === 'movies' && `font-semibold`
 					} text-center text-2xl font-display mt-5 hover:underline cursor-pointer `}
 				>
 					Movies
@@ -32,7 +32,7 @@ function Watchlist({ type, page }) {
 				<p className="text-center text-2xl font-display mt-5 ml-3 mr-3">|</p>
 				<p
 					className={`${
-						type === 'tv' && `font-semibold`
+						type === 'tvshows' && `font-semibold`
 					} text-center text-2xl font-display mt-5 hover:underline cursor-pointer `}
 				>
 					TV Shows

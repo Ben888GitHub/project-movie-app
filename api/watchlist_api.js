@@ -9,7 +9,7 @@ const account_id = 12651286;
 const session_id = '1cb859812ef11c6e5b665186c9720231f2f6a29d';
 
 const fetchWatchlist = async (type, page) => {
-	const film = type === 'tv' ? 'tv' : 'movies';
+	const film = type === 'tvshows' ? 'tv' : 'movies';
 
 	const options = {
 		method: 'GET',
@@ -32,7 +32,7 @@ const fetchWatchlist = async (type, page) => {
 };
 
 const handleAddToWatchlist = async (type, id) => {
-	const film = type === 'tv' ? 'tv' : 'movie';
+	const film = type === 'tvshows' ? 'tv' : 'movie';
 
 	const options = {
 		method: 'POST',
