@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function WatchList() {
 	return (
-		<Link href="/movies/watchlist/1">
+		<Link href="/movies/watchlist/1" passHref>
 			<button
 				type="button"
 				// className="text-white text-sm md:text-lg lg:text-lg px-3 h-10  focus:ring-4 focus:outline-none  font-medium rounded-lg   text-center inline-flex items-center mr-4 bg-gray-600  hover:bg-slate-700 focus:ring-slate-800"
