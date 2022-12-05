@@ -71,6 +71,13 @@
   <img src="/images/project-ss.png" alt="screenshot" />
 </div>
 
+<!-- TechStack -->
+
+### Built with
+
+[![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
