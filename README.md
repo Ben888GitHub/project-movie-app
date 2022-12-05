@@ -1,3 +1,7 @@
+<div align="center">
+<img src="images/movie.png" alt="movie" width="200" height="auto" />
+</div>
+
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
