@@ -44,7 +44,7 @@
     <li>
       <a href="#about-the-project-star2">About The Project</a>
       <ul>
-        <li><a href="#tech-stack-💻">Built With</a></li>
+        <li><a href="#tech-stack-💻">Tech Stack</a></li>
       </ul>
     </li>
     <li>
