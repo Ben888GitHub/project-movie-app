@@ -1,5 +1,5 @@
 <div align="center">
-<img src="images/movie.png" alt="movie" width="200" height="auto" />
+<img src="images/movie2.png" alt="movie" width="200" height="auto" />
 </div>
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
