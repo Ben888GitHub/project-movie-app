@@ -4,6 +4,29 @@
 <p>
     TMDB Film Explorer App built with NextJS & TailwindCSS
   </p>
+
+<!-- Badges -->
+<p>
+  <a href="https://github.com/Ben888GitHub/project-movie-app/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/Ben888GitHub/project-movie-app" alt="contributors" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/Ben888GitHub/project-movie-app" alt="last update" />
+  </a>
+  <a href="https://github.com/Ben888GitHub/project-movie-app/network/members">
+    <img src="https://img.shields.io/github/forks/Ben888GitHub/project-movie-app" alt="forks" />
+  </a>
+  <a href="https://github.com/Ben888GitHub/project-movie-app/stargazers">
+    <img src="https://img.shields.io/github/stars/Ben888GitHub/project-movie-app" alt="stars" />
+  </a>
+  <a href="https://github.com/Ben888GitHub/project-movie-app/issues/">
+    <img src="https://img.shields.io/github/issues/Ben888GitHub/project-movie-app" alt="open issues" />
+  </a>
+  <a href="https://github.com/Ben888GitHub/project-movie-app/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/Ben888GitHub/project-movie-app.svg" alt="license" />
+  </a>
+</p>
+
 </div>
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
