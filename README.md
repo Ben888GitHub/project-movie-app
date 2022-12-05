@@ -68,7 +68,7 @@
 ## :star2: About The Project
 
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="/images/project-ss.png" alt="screenshot" />
 </div>
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
