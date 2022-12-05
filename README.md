@@ -27,6 +27,14 @@
   </a>
 </p>
 
+<h4>
+    <a href="https://vercel.com/ben888github/project-movie-app">View Demo</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/project-movie-app/issues/">Report Bug</a>
+  <span> · </span>
+    <a href="https://github.com/Louis3797/project-movie-app/issues/">Request Feature</a>
+  </h4>
+
 </div>
 
 App Dashboard (https://vercel.com/ben888github/project-movie-app)
