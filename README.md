@@ -94,6 +94,9 @@
 
 1. Clone the repository and `cd` into its project root directory.
 2. Inside the directory, run `npm i` to install dependencies.
+3. Get your API Key from [TMDB API](https://www.themoviedb.org/settings/api)
+4. Create `.env.local` file and place all your activated API Keys.
+5. Run `npm run dev` from the project directory to run in development mode
 
 ```bash
 npm run dev
