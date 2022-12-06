@@ -78,9 +78,12 @@
 
 ### Features :dart:
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Dark Mode Support
+- View Popular Movies in Pages
+- View Popular TV Shows in Pages
+- Get Specific Movie or TV Show Information in Detail
+- Search any Movie or TV Show
+- Responsive Layout
 
 ## Getting Started
 
