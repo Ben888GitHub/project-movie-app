@@ -14,7 +14,7 @@ function MoviesOrTv({ title, filmList }) {
 		<div className="container mx-auto text-center">
 			<Link href={`/${title}/popular/${1}`} passHref>
 				<p className="no-underline hover:underline cursor-pointer font-display  text-3xl mt-10 md:mt-7 lg:mt-7">
-					{title === 'movie' ? 'Popular Movie' : 'Popular TV'}
+					{title === 'movie' ? 'Popular Movies' : 'Popular TV Shows'}
 				</p>
 			</Link>
 			<Swiper
