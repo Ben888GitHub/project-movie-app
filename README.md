@@ -104,9 +104,8 @@ yarn dev
 
 ## Usage
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- In every pages of the app, you can toggle either `light` or `dark` color mode from [next-theme](https://www.npmjs.com/package/next-themes) based on your preferences.
+- You can view the displayed Popular Movies and TV Shows in the Home Page
+- You can click the Popular Movies or TV Shows and navigate to the their pages with more items
+- Click any specific Movie or TV Show to navigate the page where you can view its information in detail
+- Click on the Search Button to search and navigate to any Movie or TV Show Page
