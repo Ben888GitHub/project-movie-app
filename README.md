@@ -92,7 +92,8 @@
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository and `cd` into its project root directory.
+2. Inside the directory, run `npm i` to install dependencies.
 
 ```bash
 npm run dev
