@@ -60,7 +60,7 @@
 ## About The Project :star2:
 
 <div align="center"> 
-  <img src="/images/plexpremier.png" alt="screenshot" />
+  <img src="/images/plexpremirepm.png" alt="screenshot" />
   <img src="/images/plexpremiercr.png" alt="screenshot" />
 </div>
 
