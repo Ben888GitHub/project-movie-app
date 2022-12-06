@@ -62,7 +62,7 @@
 
 <div align="center"> 
   <img src="/images/plexpremier.png" alt="screenshot" />
-  <img src="/images/plexpremiersv.png" alt="screenshot" />
+  <img src="/images/plexpremiercr.png" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
