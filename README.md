@@ -49,9 +49,9 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started-toolbox">Getting Started</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#usage-eyes">Usage</a></li>
   </ol>
 </details>
 
@@ -85,7 +85,7 @@
 - Search any Movie or TV Show
 - Responsive Layout
 
-## Getting Started
+## Getting Started :toolbox:
 
 1. Clone the repository and `cd` into its project root directory.
 2. Inside the directory, run `npm i` to install dependencies.
@@ -101,7 +101,7 @@ yarn dev
 
 6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Usage
+## Usage :eyes:
 
 - In every pages of the app, you can toggle either `light` or `dark` color mode from [next-theme](https://www.npmjs.com/package/next-themes) based on your preferences.
 - You can view the displayed Popular Movies and TV Shows in the Home Page
