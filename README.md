@@ -61,7 +61,8 @@
 ## About The Project :star2:
 
 <div align="center"> 
-  <img src="/images/project-ss.png" alt="screenshot" />
+  <img src="/images/plexpremier.png" alt="screenshot" />
+  <img src="/images/plexpremiersv.png" alt="screenshot" />
 </div>
 
 <!-- TechStack -->
