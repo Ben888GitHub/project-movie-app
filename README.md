@@ -62,6 +62,8 @@
 
 <div align="center"> 
   <img src="/images/plexpremier.png" alt="screenshot" />
+</div>
+<div align="center">
   <img src="/images/plexpremiersv.png" alt="screenshot" />
 </div>
 
