@@ -83,14 +83,14 @@ export const getStaticProps = async ({ params }) => {
 			genres,
 			filmImages,
 			cast: cast.slice(0, 15)
-		},
-		revalidate: 10
+		}
+		// revalidate: 10
 	};
 };
 
 export const getStaticPaths = () => {
 	return {
 		paths: [],
-		fallback: 'blocking'
+		fallback: true
 	};
 };

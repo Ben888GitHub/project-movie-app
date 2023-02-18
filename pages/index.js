@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
 	const [movie, tv] = await Promise.all([movieData, tvData]);
 
 	return {
-		props: { tv, movie },
-		revalidate: 10
+		props: { tv, movie }
+		// revalidate: 10
 	};
 };
