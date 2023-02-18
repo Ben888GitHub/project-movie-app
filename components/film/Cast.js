@@ -38,7 +38,7 @@ function Cast({ cast }) {
 				scrollbar={{ draggable: true }}
 				lazy={true}
 			>
-				{cast.map((actor, idx) => (
+				{cast?.map((actor, idx) => (
 					<SwiperSlide key={idx}>
 						<div className="mx-auto mb-10">
 							<div className="text-center m-3 md:m-3 lg:m-3">
