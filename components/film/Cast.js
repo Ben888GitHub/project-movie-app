@@ -1,42 +1,22 @@
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { SwiperSlide } from 'swiper/react';
+
+import FilmSwiper from '../FilmSwiper';
+import {
+	dynamicBreakpoints,
+	dynamicModules
+} from '../../utils/swiperBreakpoints';
+
+const isCast = 'cast';
 
 function Cast({ cast }) {
-	console.log(cast);
-
 	return (
 		<>
 			<p className="text-2xl font-medium px-4 mt-7 mb-1">Main Cast</p>
-
-			<Swiper
-				modules={[Navigation, Pagination, Scrollbar, A11y]}
+			<FilmSwiper
+				breakpoints={dynamicBreakpoints()}
 				spaceBetween={30}
-				breakpoints={{
-					300: {
-						slidesPerView: 2,
-						spaceBetween: 10
-					},
-					640: {
-						slidesPerView: 2,
-						spaceBetween: 20
-					},
-					768: {
-						slidesPerView: 2,
-						spaceBetween: 40
-					},
-					1024: {
-						slidesPerView: 5,
-						spaceBetween: 10
-					},
-					1025: {
-						slidesPerView: 5,
-						spaceBetween: 0
-					}
-				}}
-				navigation
-				scrollbar={{ draggable: true }}
-				lazy={true}
+				modules={dynamicModules(isCast)}
 			>
 				{cast?.map((actor, idx) => (
 					<SwiperSlide key={idx}>
@@ -59,7 +39,7 @@ function Cast({ cast }) {
 						</div>
 					</SwiperSlide>
 				))}
-			</Swiper>
+			</FilmSwiper>
 		</>
 	);
 }

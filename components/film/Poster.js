@@ -1,50 +1,24 @@
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import FilmSwiper from '../FilmSwiper';
+import {
+	dynamicBreakpoints,
+	dynamicModules
+} from '../../utils/swiperBreakpoints';
+
 function Poster({ filmImages }) {
 	return (
 		<div className="mt-5">
-			<Swiper
-				modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+			<FilmSwiper
+				breakpoints={dynamicBreakpoints(true)}
 				spaceBetween={20}
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: false
-				}}
-				pagination={{
-					clickable: true
-				}}
-				breakpoints={{
-					300: {
-						slidesPerView: 1,
-						spaceBetween: 10
-					},
-					640: {
-						slidesPerView: 1,
-						spaceBetween: 20
-					},
-					768: {
-						slidesPerView: 1,
-						spaceBetween: 40
-					},
-					1024: {
-						slidesPerView: 1,
-						spaceBetween: 10
-					},
-					1025: {
-						slidesPerView: 2,
-						spaceBetween: 0
-					}
-				}}
-				navigation
-				scrollbar={{ draggable: true }}
-				lazy={true}
+				modules={dynamicModules()}
 			>
 				{filmImages?.map((gallery, idx) => (
 					<SwiperSlide key={idx}>
@@ -63,7 +37,7 @@ function Poster({ filmImages }) {
 						</div>
 					</SwiperSlide>
 				))}
-			</Swiper>
+			</FilmSwiper>
 		</div>
 	);
 }

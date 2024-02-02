@@ -7,9 +7,10 @@ import SearchInput from './SearchInput';
 import SearchFilmOptions from './SearchFilmOptions';
 
 function SearchFilm({ open, setOpen }) {
-	const [queryFilm, setQueryFilm] = useState('');
-	const [selected, setSelected] = useState('');
+	const [queryFilm, setQueryFilm] = useState(''); // search input value for <SearchInput/> component
+	const [selected, setSelected] = useState(''); // selected film for <SearchFilmOptions/> component
 
+	// 1) Fetch the data in CSR mode
 	const { data, isLoading } = useQuery({
 		queryKey: ['films', queryFilm],
 		queryFn: () => fetchSearchFilm(queryFilm),
@@ -18,6 +19,8 @@ function SearchFilm({ open, setOpen }) {
 		refetchOnMount: true,
 		keepPreviousData: true
 	});
+
+	// 2) searched film data will be filtered based on queryFilm first before displaying
 	const { filteredFilm } = useFilterFilm(data, queryFilm);
 
 	const handleCloseModal = () => {

@@ -1,3 +1,10 @@
+/**
+ * Filters the given data based on the queryFilm string to return only films that match.
+ *
+ * @param {Object} data - The data to filter. Should have a results array property.
+ * @param {string} queryFilm - The search query string to match films against.
+ * @returns {Object} An object with a filteredFilm array property containing the matching films.
+ */
 function useFilterFilm(data, queryFilm) {
 	const filteredVal = data?.results.filter((film) => {
 		const { name, original_title, media_type } = film;
